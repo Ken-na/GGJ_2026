@@ -1,0 +1,6 @@
+[gd_resource type="Resource" script_class="SpawnRateChange" format=3 uid="uid://biuysksjwt0ow"]
+
+[ext_resource type="Script" uid="uid://b4tjphbpqkoio" path="res://pong/scripts/spawnRateChange.gd" id="1_t60dw"]
+
+[resource]
+script = ExtResource("1_t60dw")
