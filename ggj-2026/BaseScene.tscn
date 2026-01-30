@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://cv6nlkf7wycem"]
+
+[ext_resource type="PackedScene" uid="uid://c6dhtb60fan7x" path="res://sprite_2d.tscn" id="1_m2yd1"]
+[ext_resource type="Script" uid="uid://chqgd07see8a7" path="res://base_scene.gd" id="1_r0f7s"]
+[ext_resource type="PackedScene" uid="uid://dkos1e6ro0jm2" path="res://Bullet.tscn" id="2_4a80b"]
+
+[node name="BaseScene" type="Node2D" unique_id=2018929491 node_paths=PackedStringArray("tank")]
+script = ExtResource("1_r0f7s")
+bulletSceneFab = ExtResource("2_4a80b")
+tank = NodePath("Sprite2D")
+
+[node name="Sprite2D" parent="." unique_id=919728952 instance=ExtResource("1_m2yd1")]
+position = Vector2(568, 338)
