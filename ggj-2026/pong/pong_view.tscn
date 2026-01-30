@@ -12,3 +12,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4523687, 13.174832, 0)
 velocity = Vector2(0.1, -5)
 
 [node name="padel" parent="." unique_id=795246886 instance=ExtResource("3_ebrpb")]
+moveSpeed = 5.0
