@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cgeyegq61ouqq"]
+
+[ext_resource type="Script" uid="uid://bbw3pio54g4gh" path="res://pong/scripts/padel.gd" id="1_kvrh0"]
+[ext_resource type="Texture2D" uid="uid://bjabuilwucqtn" path="res://icon.svg" id="2_spoch"]
+[ext_resource type="Shape3D" uid="uid://bqkxtsnd3kqqp" path="res://pong/padels/base.tres" id="3_o756s"]
+
+[node name="padel" type="Node3D" unique_id=795246886 node_paths=PackedStringArray("area")]
+script = ExtResource("1_kvrh0")
+area = NodePath("Area3D")
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1761826639]
+transform = Transform3D(3, 0, 0, 0, 0.2, 0, 0, 0, 0.5, 0, 0, 0)
+texture = ExtResource("2_spoch")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=299177442]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1694187701]
+shape = ExtResource("3_o756s")
