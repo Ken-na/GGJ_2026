@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://doypxgyrw1i28"]
+[gd_scene format=3 uid="uid://btnb6m86ntsq6"]
 
 [ext_resource type="PackedScene" uid="uid://bgk2vx8xgyqex" path="res://pong/pong_view.tscn" id="1_kayok"]
 
