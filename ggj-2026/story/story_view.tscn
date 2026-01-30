@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cjawia254yeoo"]
+
+[ext_resource type="Script" uid="uid://de3q3poetfgsd" path="res://story/storyWorldEnv.gd" id="1_bn163"]
+[ext_resource type="PackedScene" uid="uid://6wwevf502q7a" path="res://story/3D_Assets/Out/Hallway.glb" id="1_r27x1"]
+
+[node name="StoryView" type="Node3D" unique_id=1344410322]
+script = ExtResource("1_bn163")
+
+[node name="Hallway" parent="." unique_id=820862294 instance=ExtResource("1_r27x1")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, -15, 0)
