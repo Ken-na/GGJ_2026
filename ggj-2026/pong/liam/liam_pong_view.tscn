@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://bgk2vx8xgyqex"]
+
+[ext_resource type="Script" uid="uid://dx0kqem4bxo8u" path="res://pong/scripts/pongView.gd" id="1_ebrpb"]
+[ext_resource type="PackedScene" uid="uid://b8q22n1vnmij6" path="res://pong/ball.tscn" id="2_wwu4u"]
+[ext_resource type="PackedScene" uid="uid://cgeyegq61ouqq" path="res://pong/padel.tscn" id="3_ebrpb"]
+[ext_resource type="Script" uid="uid://d3af3srauotrd" path="res://pong/scripts/padelLeftRight.gd" id="4_wbkha"]
+[ext_resource type="Script" uid="uid://bbw3pio54g4gh" path="res://pong/scripts/padel.gd" id="6_hb4qn"]
+[ext_resource type="PackedScene" uid="uid://tqic6sl4uyvu" path="res://pong/ball/curveBall.tscn" id="6_i1qw3"]
+[ext_resource type="PackedScene" uid="uid://bexwrqlgg1mu" path="res://pong/padels/padelLeftRight.tscn" id="6_ostku"]
+
+[node name="PongView" type="Node3D" unique_id=2027028987]
+script = ExtResource("1_ebrpb")
+
+[node name="ball" parent="." unique_id=707752679 instance=ExtResource("2_wwu4u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4523687, 13.174832, 0)
+velocity = Vector2(0.1, -5)
+
+[node name="padelLeftRight" parent="." unique_id=609761332 instance=ExtResource("3_ebrpb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5132093, 1.3040912, 0)
+script = ExtResource("4_wbkha")
+moveSpeed = 5.0
+
+[node name="padel" parent="." unique_id=795246886 instance=ExtResource("6_ostku")]
+script = ExtResource("6_hb4qn")
+
+[node name="curveBall" parent="." unique_id=1518585013 instance=ExtResource("6_i1qw3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5129018, 8.024097, 0)
+velocity = Vector2(0, -5)
