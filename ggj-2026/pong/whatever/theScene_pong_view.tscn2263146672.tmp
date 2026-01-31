@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://dkc40sta7enda"]
+
+[ext_resource type="Script" uid="uid://dx0kqem4bxo8u" path="res://pong/scripts/pongView.gd" id="1_uvwhk"]
+[ext_resource type="PackedScene" uid="uid://cgeyegq61ouqq" path="res://pong/padel.tscn" id="3_x4tsb"]
+[ext_resource type="Script" uid="uid://d3af3srauotrd" path="res://pong/scripts/padelLeftRight.gd" id="4_2rfdw"]
+[ext_resource type="PackedScene" uid="uid://bvdmnd343mwij" path="res://pong/whatever/sineBallball.tscn" id="4_45dr7"]
+
+[node name="theScene_pong" type="Node3D" unique_id=2027028987]
+script = ExtResource("1_uvwhk")
+
+[node name="padel" parent="." unique_id=795246886 instance=ExtResource("3_x4tsb")]
+moveSpeed = 5.0
+
+[node name="padelLeftRight" parent="." unique_id=609761332 instance=ExtResource("3_x4tsb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3040912, 0)
+script = ExtResource("4_2rfdw")
+moveSpeed = 5.0
+
+[node name="ball2" parent="." unique_id=707752679 instance=ExtResource("4_45dr7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.964087, 0)
+time = null
+velocity = Vector2(2, -5)
+speed = null
