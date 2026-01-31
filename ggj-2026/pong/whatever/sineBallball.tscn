@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bvdmnd343mwij"]
+
+[ext_resource type="Script" uid="uid://did22qhoim86v" path="res://sineBall.gd" id="1_kqxfq"]
+[ext_resource type="Texture2D" uid="uid://bjabuilwucqtn" path="res://icon.svg" id="2_52tt0"]
+[ext_resource type="Shape3D" uid="uid://brunftramid2h" path="res://pong/ballShape.tres" id="3_hp74g"]
+
+[node name="ball" type="Node3D" unique_id=707752679 node_paths=PackedStringArray("area")]
+script = ExtResource("1_kqxfq")
+area = NodePath("Area3D")
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1922072098]
+texture = ExtResource("2_52tt0")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=40941805]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=671683216]
+shape = ExtResource("3_hp74g")
