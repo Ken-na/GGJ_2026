@@ -2,9 +2,27 @@
 
 [ext_resource type="Script" uid="uid://de3q3poetfgsd" path="res://story/storyWorldEnv.gd" id="1_bn163"]
 [ext_resource type="PackedScene" uid="uid://6wwevf502q7a" path="res://story/3D_Assets/Out/Hallway.glb" id="1_r27x1"]
+[ext_resource type="Texture2D" uid="uid://bjabuilwucqtn" path="res://icon.svg" id="3_jiscn"]
 
-[node name="StoryView" type="Node3D" unique_id=1344410322]
+[node name="StoryView" type="Node3D" unique_id=1344410322 node_paths=PackedStringArray("hallWayToMove")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.513087, 0, 0)
 script = ExtResource("1_bn163")
+hallWayToMove = NodePath("SceneContainer")
+positions = Array[Vector3]([Vector3(0, 0, 0), Vector3(-20, 0, 0)])
 
-[node name="Hallway" parent="." unique_id=820862294 instance=ExtResource("1_r27x1")]
+[node name="Node3D" type="Node3D" parent="." unique_id=1029084511]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, -12.258971, 0)
+
+[node name="Sprite3D" type="Sprite3D" parent="Node3D" unique_id=953519282]
+texture = ExtResource("3_jiscn")
+
+[node name="SceneContainer" type="Node3D" parent="." unique_id=1185964989]
+
+[node name="Hallway" parent="SceneContainer" unique_id=820862294 instance=ExtResource("1_r27x1")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, -15, 0)
+
+[node name="Hallway2" parent="SceneContainer" unique_id=1096569386 instance=ExtResource("1_r27x1")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 100, -15, 0)
+
+[node name="Hallway3" parent="SceneContainer" unique_id=794521447 instance=ExtResource("1_r27x1")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 200, -15, 0)
