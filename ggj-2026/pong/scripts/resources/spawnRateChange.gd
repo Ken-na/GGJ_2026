@@ -2,7 +2,11 @@ extends Resource
 class_name SpawnRateChange
 
 enum BallType {
-	test
+	test,
+	sineBall,
+	repeatBall,
+	avoidantBall
+	
 }
 
 @export var type:BallType
