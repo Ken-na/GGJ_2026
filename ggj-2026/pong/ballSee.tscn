@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cobukw2ftj3ep"]
+
+[ext_resource type="Script" uid="uid://dvf60nwxr6cvf" path="res://pong/scripts/ball.gd" id="1_toyjx"]
+[ext_resource type="Texture2D" uid="uid://w3vocvncc1fe" path="res://sprites/balls/Ball-16x16.png" id="2_njll1"]
+[ext_resource type="Shape3D" uid="uid://brunftramid2h" path="res://pong/ballShape.tres" id="3_x2x1o"]
+
+[node name="ball" type="Node3D" unique_id=707752679 node_paths=PackedStringArray("area")]
+script = ExtResource("1_toyjx")
+area = NodePath("Area3D")
+velocity = null
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1922072098]
+pixel_size = 0.05
+texture_filter = 0
+texture = ExtResource("2_njll1")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=40941805]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=671683216]
+shape = ExtResource("3_x2x1o")
