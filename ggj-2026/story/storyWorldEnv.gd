@@ -55,8 +55,8 @@ func moveScene(delta:float):
 		sceneManager.finishedStoryWalking()
 		
 
-func startSpawningText(script: WritingLineChange):
-	textSpawner.startSpawning(script)
+func startSpawningText(script: WritingLineChange, sceneManager:CombineSceneManager):
+	textSpawner.startSpawning(script, sceneManager)
 	
 #func showText(lineToShow: WritingLine):
 #	dialogController.showText(lineToShow);

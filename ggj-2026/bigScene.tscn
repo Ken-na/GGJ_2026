@@ -11,7 +11,7 @@ cam = NodePath("Camera3D")
 storyView = NodePath("StoryView")
 pongView = NodePath("PongView")
 fullScript = ExtResource("2_jovnt")
-cameraPosPong = Vector3(0.6723796, -8.336965, 8.496321)
+cameraPosPong = Vector3(0.672, -8.737, 8.496)
 cameraRotationPong = 0.61
 cameraPosStory = Vector3(0, -4.2335873, 12)
 cameraRotationStory = -0.42
@@ -20,11 +20,11 @@ cameraRotationStory = -0.42
 transform = Transform3D(1, 0, 0, 0, 0.9135454, 0.40673664, 0, -0.40673664, 0.9135454, 0, -4.2335873, 12)
 
 [node name="PongView" parent="." unique_id=2027028987 instance=ExtResource("1_4u3hy")]
-transform = Transform3D(1, 0, 0, 0, 0.81915206, -0.57357645, 0, 0.57357645, 0.81915206, 0, 5.3357677, -12.392563)
+transform = Transform3D(1, 0, 0, 0, 0.81915206, -0.57357645, 0, 0.57357645, 0.81915206, 0, 4.3357677, -12.392563)
 topOfField = 20.0
 fieldWidth = 24.0
 testSpawningScript = null
 
 [node name="StoryView" parent="." unique_id=1864827925 node_paths=PackedStringArray("sceneManager") instance=ExtResource("5_cjb3u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.973754, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.27393365, 4.973754, 0)
 sceneManager = NodePath("..")

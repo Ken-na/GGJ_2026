@@ -44,11 +44,12 @@ func moveCameraToPong():
 		
  
 func resumeStory():
-	pongView.setRunning(false)
 	await get_tree().create_timer(.5).timeout
+	pongView.setRunning(false)
 	
 	#wait then move
 	await moveCameraToStory()
+	storyView.nextScene()
 	
 func moveCameraToStory():
 	var movePerc: float = 0
@@ -62,13 +63,13 @@ func moveCameraToStory():
 func finishedStoryWalking():
 	
 	#storyView.showText(fullScript.writingLineChanges[currentScriptIndex].scriptLines[currentScriptLineIndex])
-	storyView.startSpawningText(fullScript.writingLineChanges[currentScriptIndex])
+	
 	#WAIT FOR CLICK??
 	#storyView.showText(fullScript[currentScriptIndex][currentScriptIndexLine])
 	#introduction bump 
 	await get_tree().create_timer(1.0).timeout
 	#wait then move
-	print(fullScript.writingLineChanges[currentScriptIndex].scriptTitle)
+	storyView.startSpawningText(fullScript.writingLineChanges[currentScriptIndex], self)
 	if fullScript.writingLineChanges[currentScriptIndex].level != null:
 		pongView.startLevel(fullScript.writingLineChanges[currentScriptIndex].level)
 	await moveCameraToPong()
