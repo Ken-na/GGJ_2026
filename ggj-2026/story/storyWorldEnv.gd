@@ -1,6 +1,9 @@
 extends Node3D
+class_name StoryWorldEnv
 
 @export var sceneManager: CombineSceneManager 
+@export var textSpawner: TextSpawner
+
 @export var hallWayToMove: Node3D
 @export var positions:Array[Vector3]
 var currPosition:int = 0
@@ -9,6 +12,7 @@ var movingToNextScene:bool = false
 #var moveTime: float = 3
 var movePerc: float = 0
 var moveSpeed: float = .25
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -45,8 +49,14 @@ func moveScene(delta:float):
 	
 	movePerc += delta * moveSpeed
 	hallWayToMove.position = positions[currPosition - 1].lerp(positions[currPosition], movePerc)
-	print("Hallway pos: ", hallWayToMove.position)
 	
 	if movePerc >= 1: 
 		movingToNextScene = false
 		sceneManager.finishedStoryWalking()
+		
+
+func startSpawningText(script: WritingLineChange):
+	textSpawner.startSpawning(script)
+	
+#func showText(lineToShow: WritingLine):
+#	dialogController.showText(lineToShow);
