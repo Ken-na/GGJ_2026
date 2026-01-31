@@ -2,16 +2,20 @@
 
 [ext_resource type="Script" uid="uid://did22qhoim86v" path="res://sineBall.gd" id="1_kqxfq"]
 [ext_resource type="Texture2D" uid="uid://w3vocvncc1fe" path="res://sprites/balls/Ball-16x16.png" id="2_kqxfq"]
+[ext_resource type="PackedScene" uid="uid://sujrdyaw0e0c" path="res://pong/ballSpark.tscn" id="3_bfhrb"]
 [ext_resource type="Shape3D" uid="uid://brunftramid2h" path="res://pong/ballShape.tres" id="3_hp74g"]
 
-[node name="ball" type="Node3D" unique_id=707752679 node_paths=PackedStringArray("area")]
+[node name="ball" type="Node3D" unique_id=707752679 node_paths=PackedStringArray("area", "sparks")]
 script = ExtResource("1_kqxfq")
 area = NodePath("Area3D")
+sparks = NodePath("Sprite3D/GPUParticles3D")
 
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=1922072098]
 pixel_size = 0.0625
 texture_filter = 0
 texture = ExtResource("2_kqxfq")
+
+[node name="GPUParticles3D" parent="Sprite3D" unique_id=318749315 instance=ExtResource("3_bfhrb")]
 
 [node name="Area3D" type="Area3D" parent="." unique_id=40941805]
 
