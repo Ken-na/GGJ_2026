@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://cajutpunyk7rj"]
+
+[ext_resource type="Script" uid="uid://bu7wnlshfcssi" path="res://pong/scripts/padelSee.gd" id="1_tmndj"]
+[ext_resource type="Texture2D" uid="uid://jpwfj5ve2tck" path="res://sprites/keys/numbers1Through5.png" id="2_tmndj"]
+[ext_resource type="Texture2D" uid="uid://dujj7h4fsj5e6" path="res://sprites/paddle/paddle-end-16x16.png" id="3_j3q6o"]
+[ext_resource type="Texture2D" uid="uid://bfbwi3bxnca6s" path="res://sprites/paddle/paddle-mid-16x16.png" id="4_ga4ac"]
+[ext_resource type="Shape3D" uid="uid://bqkxtsnd3kqqp" path="res://pong/padels/base.tres" id="5_w2vlf"]
+
+[node name="padel" type="Node3D" unique_id=795246886 node_paths=PackedStringArray("leftSprite", "middleSprite", "rightSprite", "iconSprite", "area")]
+script = ExtResource("1_tmndj")
+leftSprite = NodePath("Left")
+middleSprite = NodePath("Middle")
+rightSprite = NodePath("Right")
+iconSprite = NodePath("SpaceIcon")
+area = NodePath("Area3D")
+moveSpeed = 5.0
+baseSize = 1.5
+
+[node name="SpaceIcon" type="Sprite3D" parent="." unique_id=1277109727]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 1.187105, 0)
+texture_filter = 0
+texture = ExtResource("2_tmndj")
+
+[node name="Left" type="Sprite3D" parent="." unique_id=814584427]
+pixel_size = 0.0625
+texture_filter = 0
+texture = ExtResource("3_j3q6o")
+
+[node name="Middle" type="Sprite3D" parent="." unique_id=1761826639]
+pixel_size = 0.0625
+texture_filter = 0
+texture = ExtResource("4_ga4ac")
+
+[node name="Right" type="Sprite3D" parent="." unique_id=449525947]
+flip_h = true
+pixel_size = 0.0625
+texture_filter = 0
+texture = ExtResource("3_j3q6o")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=299177442]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1694187701]
+shape = ExtResource("5_w2vlf")
