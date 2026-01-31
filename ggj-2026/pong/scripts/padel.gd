@@ -6,6 +6,8 @@ class_name Padel
 #feel free to unexport these, figured it might make tweaking them easier
 @export var moveSpeed:float = 10;
 
+var pongView:PongView
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	area.monitoring = true
