@@ -36,3 +36,5 @@ func inBounds() -> bool:
 		
 	return true
 	
+func movePadel(movementVelocity: Vector3):
+	position += movementVelocity * get_process_delta_time()

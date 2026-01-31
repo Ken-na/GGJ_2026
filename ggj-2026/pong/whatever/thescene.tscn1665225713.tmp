@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://d1oswf7q3iteg"]
+
+[ext_resource type="PackedScene" uid="uid://cjawia254yeoo" path="res://story/story_view.tscn" id="2_64ioo"]
+[ext_resource type="PackedScene" uid="uid://dkc40sta7enda" path="res://pong/whatever/theScene_pong_view.tscn" id="2_fs1km"]
+
+[node name="theScene" type="Node3D" unique_id=985336719]
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=2134687739]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 21.594723)
+
+[node name="StoryView" parent="." unique_id=1344410322 instance=ExtResource("2_64ioo")]
+
+[node name="theScene_pong" parent="." unique_id=2027028987 instance=ExtResource("2_fs1km")]

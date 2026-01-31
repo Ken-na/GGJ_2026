@@ -14,3 +14,5 @@
 /ggj-2026/.mono/
 /ggj-2026/data_*/
 /ggj-2026/mono_crash.*.json
+
+/out/*
