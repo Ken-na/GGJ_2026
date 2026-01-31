@@ -12,5 +12,14 @@ func _process(delta: float) -> void:
 	pass
 
 
-func showText(lineToShow: WritingLine):
+func showSpeech(lineToShow: WritingLine):
 	label.text = lineToShow.scriptLine
+
+func showThought(lineToShow: WritingLine):
+	label.text = lineToShow.thoughtLine
+	
+func markPhaseFail():
+	pass
+
+func markPhaseSuccess():
+	pass
