@@ -21,7 +21,7 @@ transform = Transform3D(1, 0, 0, 0, 0.9135454, 0.40673664, 0, -0.40673664, 0.913
 
 [node name="PongView" parent="." unique_id=2027028987 instance=ExtResource("1_4u3hy")]
 transform = Transform3D(1, 0, 0, 0, 0.81915206, -0.57357645, 0, 0.57357645, 0.81915206, 0, 4.3357677, -12.392563)
-topOfField = 20.0
+topOfField = 26.0
 fieldWidth = 24.0
 testSpawningScript = null
 

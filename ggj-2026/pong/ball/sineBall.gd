@@ -13,6 +13,5 @@ func _process(delta):
 	time += delta
 	verticalSpeed = (sin(time*10)+1)/2
 	horizontalSpeed = sin(time*5)
-	print_debug(str((sin(time)+1)/2))
 	super._process(delta)
 	pass
