@@ -21,6 +21,10 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	super._process(delta)
 	
+	leftSprite.modulate.a = alpha
+	middleSprite.modulate.a = alpha
+	rightSprite.modulate.a = alpha
+	
 	if !moving:
 		return
 
@@ -38,7 +42,6 @@ func _process(delta: float) -> void:
 		movePadel(-Vector3.RIGHT * moveSpeed)
 	elif position.x < movingToXPos:
 		movePadel(Vector3.RIGHT * moveSpeed)
-	
 
 
 func _input(event: InputEvent) -> void:

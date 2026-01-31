@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bfbwi3bxnca6s" path="res://sprites/paddle/paddle-mid-16x16.png" id="4_ga4ac"]
 [ext_resource type="Shape3D" uid="uid://bqkxtsnd3kqqp" path="res://pong/padels/base.tres" id="5_w2vlf"]
 
-[node name="padel" type="Node3D" unique_id=795246886 node_paths=PackedStringArray("leftSprite", "middleSprite", "rightSprite", "iconSprite", "area")]
+[node name="padelSee" type="Node3D" unique_id=795246886 node_paths=PackedStringArray("leftSprite", "middleSprite", "rightSprite", "iconSprite", "area")]
 script = ExtResource("1_tmndj")
 leftSprite = NodePath("Left")
 middleSprite = NodePath("Middle")
@@ -14,7 +14,7 @@ rightSprite = NodePath("Right")
 iconSprite = NodePath("SpaceIcon")
 area = NodePath("Area3D")
 moveSpeed = 5.0
-baseSize = 1.5
+baseSize = 3.0
 colliderBallID = 1
 
 [node name="SpaceIcon" type="Sprite3D" parent="." unique_id=1277109727]
