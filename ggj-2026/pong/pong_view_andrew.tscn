@@ -9,6 +9,7 @@
 [ext_resource type="Shape3D" uid="uid://bqkxtsnd3kqqp" path="res://pong/padels/base.tres" id="7_k5qf5"]
 
 [node name="PongView" type="Node3D" unique_id=2027028987 node_paths=PackedStringArray("background", "ballSpawner", "ballContainer", "leftCollidor", "rightCollidor", "topCollidor", "botCollidor")]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 script = ExtResource("1_8vvw0")
 topOfField = -16.0
 fieldWidth = 12.0

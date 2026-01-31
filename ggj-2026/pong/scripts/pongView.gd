@@ -51,7 +51,8 @@ func _ready() -> void:
 		if child is Padel:
 			addPadel(child)
 	
-	startSpawning(testSpawningScript)
+	if testSpawningScript:
+		startSpawning(testSpawningScript)
 
 func _left_entered(body:Area3D) -> void:
 	if body.get_parent() is Ball:
@@ -80,6 +81,15 @@ func addBall(ball:Ball) -> void:
 
 func startSpawning(spawningScript:SpawningScript) -> void:
 	ballSpawner.startSpawning(spawningScript, self)
+
+func startLevel(level:Level):
+	startSpawning(level.spawnScript)
+
+func setRunning(running:bool):
+	if running:
+		process_mode = Node.PROCESS_MODE_ALWAYS
+	else:
+		process_mode = Node.PROCESS_MODE_DISABLED
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

@@ -1,7 +1,7 @@
-[gd_scene format=3 uid="uid://dglpsyjw7fv8f"]
+[gd_scene format=3 uid="uid://b045c4kkjmx75"]
 
 [ext_resource type="Script" uid="uid://dvyltx743lx0t" path="res://combine/combineSceneManager.gd" id="1_g7l6y"]
-[ext_resource type="PackedScene" path="res://pong/pong_view_andrew.tscn" id="2_g7l6y"]
+[ext_resource type="PackedScene" uid="uid://ca0whf7l0j0d6" path="res://pong/pong_view_andrew.tscn" id="2_g7l6y"]
 [ext_resource type="Resource" uid="uid://sonxmk0cgvbd" path="res://pong/resources/writingEncounters.tres" id="2_k7j6n"]
 [ext_resource type="PackedScene" uid="uid://cjawia254yeoo" path="res://story/story_view.tscn" id="2_sbi6d"]
 
