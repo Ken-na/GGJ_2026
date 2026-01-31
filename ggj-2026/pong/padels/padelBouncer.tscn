@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://cgnk0qm4paxob"]
+
+[ext_resource type="Script" uid="uid://cnmgurisr4eid" path="res://pong/scripts/padelBouncer.gd" id="1_fguk3"]
+[ext_resource type="Shape3D" uid="uid://bqkxtsnd3kqqp" path="res://pong/padels/base.tres" id="2_fynd7"]
+[ext_resource type="Texture2D" uid="uid://jpwfj5ve2tck" path="res://sprites/keys/numbers1Through5.png" id="3_sjlvm"]
+[ext_resource type="Texture2D" uid="uid://dujj7h4fsj5e6" path="res://sprites/paddle/paddle-end-16x16.png" id="4_hhv62"]
+[ext_resource type="Texture2D" uid="uid://bfbwi3bxnca6s" path="res://sprites/paddle/paddle-mid-16x16.png" id="5_nrlwa"]
+[ext_resource type="Texture2D" uid="uid://bjabuilwucqtn" path="res://icon.svg" id="6_fynd7"]
+
+[node name="padel" type="Node3D" unique_id=795246886 node_paths=PackedStringArray("dirDisplay", "leftSprite", "middleSprite", "rightSprite", "iconSprite", "area")]
+script = ExtResource("1_fguk3")
+dirDisplay = NodePath("DirectionArrow")
+leftSprite = NodePath("Left")
+middleSprite = NodePath("Middle")
+rightSprite = NodePath("Right")
+iconSprite = NodePath("SpaceIcon")
+area = NodePath("Area3D")
+moveSpeed = 5.0
+baseSize = 3.0
+colliderBallID = 1
+
+[node name="Area3D" type="Area3D" parent="." unique_id=299177442]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1694187701]
+shape = ExtResource("2_fynd7")
+
+[node name="LeftSide" type="Node3D" parent="." unique_id=914324268]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+
+[node name="SpaceIcon" type="Sprite3D" parent="." unique_id=1277109727]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5935525, 0)
+sorting_offset = 3.0
+texture_filter = 0
+texture = ExtResource("3_sjlvm")
+
+[node name="Left" type="Sprite3D" parent="." unique_id=814584427]
+sorting_offset = 3.0
+pixel_size = 0.0625
+texture_filter = 0
+texture = ExtResource("4_hhv62")
+
+[node name="Middle" type="Sprite3D" parent="." unique_id=1761826639]
+sorting_offset = 3.0
+pixel_size = 0.0625
+texture_filter = 0
+texture = ExtResource("5_nrlwa")
+
+[node name="Right" type="Sprite3D" parent="." unique_id=449525947]
+sorting_offset = 3.0
+flip_h = true
+pixel_size = 0.0625
+texture_filter = 0
+texture = ExtResource("4_hhv62")
+
+[node name="DirectionArrow" type="Sprite3D" parent="." unique_id=699962244]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 1, 0, 0)
+sorting_offset = 4.0
+texture = ExtResource("6_fynd7")

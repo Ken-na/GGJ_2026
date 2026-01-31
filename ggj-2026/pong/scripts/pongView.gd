@@ -19,6 +19,8 @@ class_name PongView
 var padels:Array[Padel]
 var balls:Array[Ball]
 
+var acceptedBall:SpawnRateChange.BallType = -1
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	background.position.y = topOfField/2
@@ -51,7 +53,8 @@ func _ready() -> void:
 		if child is Padel:
 			addPadel(child)
 	
-	startSpawning(testSpawningScript)
+	if testSpawningScript:
+		startSpawning(testSpawningScript)
 
 func _left_entered(body:Area3D) -> void:
 	if body.get_parent() is Ball:
@@ -68,7 +71,23 @@ func _top_entered(body:Area3D) -> void:
 func _bottom_entered(body:Area3D) -> void:
 	if body.get_parent() is Ball:
 		body.get_parent().goneOffBottom()
-		
+		if body.get_parent().ballTypeID == acceptedBall:
+			shrinkPanels(body.get_parent())
+		else:
+			growPanels(body.get_parent())
+
+func growPanels(ball:Ball):
+	for padel:Padel in padels:
+		if padel.colliderBallID == ball.ballTypeID:
+			if padel.enabled == false:
+				padel.enablePadel()
+			padel.incrementSize()
+
+func shrinkPanels(ball:Ball):
+	for padel:Padel in padels:
+		if padel.colliderBallID == ball.ballTypeID:
+			padel.decrementSize()
+
 func addPadel(padel:Padel) -> void:
 	padels.append(padel)
 	padel.pongView = self
@@ -80,6 +99,19 @@ func addBall(ball:Ball) -> void:
 
 func startSpawning(spawningScript:SpawningScript) -> void:
 	ballSpawner.startSpawning(spawningScript, self)
+
+func startLevel(level:Level):
+	startSpawning(level.spawnScript)
+	if level.anyPositiveBalls:
+		acceptedBall = level.positiveBallType
+	else:
+		acceptedBall = -1
+
+func setRunning(running:bool):
+	if running:
+		process_mode = Node.PROCESS_MODE_ALWAYS
+	else:
+		process_mode = Node.PROCESS_MODE_DISABLED
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
