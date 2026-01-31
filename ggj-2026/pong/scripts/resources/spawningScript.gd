@@ -9,7 +9,7 @@ func getSpawnRate(ballType:SpawnRateChange.BallType, time:float) -> float:
 		if spawnRateChange.type == ballType and spawnRateChange.time < time:
 			return spawnRateChange.newRate
 	
-	if startingSpawnValues[ballType]:
+	if startingSpawnValues.get(ballType) != null:
 		return startingSpawnValues[ballType]
 	
 	return 0

@@ -6,6 +6,7 @@ var moving:bool = false
 @export var leftSprite:Sprite3D
 @export var middleSprite:Sprite3D
 @export var rightSprite:Sprite3D
+@export var iconSprite:Sprite3D
 
 #this padel only moves when holding space, flips direction when press space, flips directions on bound.
 
@@ -22,9 +23,16 @@ func _process(delta: float) -> void:
 	if moving:
 		movePadel(Vector3.RIGHT * (moveSpeed if movingRight else -moveSpeed))
 		#movePadel(Vector3.RIGHT.rotated(rotation.normalized(), rotation.x) * (moveSpeed if movingRight else -moveSpeed)) #normalized errors, may bring back later
-
-func collidedWithEdge(side:int) -> void:
-	movingRight = side == -1
+	
+	if position.x - area.scale.x/2 < -pongView.fieldWidth/2:
+		movingRight = true;
+	elif position.x + area.scale.x/2 > pongView.fieldWidth/2:
+		movingRight = false
+	
+	if movingRight:
+		iconSprite.scale.x = 2
+	else:
+		iconSprite.scale.x = -2
 
 func _input(event: InputEvent) -> void:
 	var currentVelocity:Vector3
