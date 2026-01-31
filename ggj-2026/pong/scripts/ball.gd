@@ -5,6 +5,7 @@ class_name Ball
 @export var velocity:Vector2 = Vector2(0, 0)
 @export var verticalSpeed:float = 1.0
 @export var horizontalSpeed:float = 1.0
+@export var ballTypeID:SpawnRateChange.BallType
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

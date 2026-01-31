@@ -7,6 +7,8 @@ class_name Padel
 @export var moveSpeed:float = 10;
 @export var baseSize:float = 5;
 
+@export var colliderBallID:SpawnRateChange.BallType
+
 var pongView:PongView
 
 # Called when the node enters the scene tree for the first time.
@@ -17,7 +19,7 @@ func _ready() -> void:
 	resizePadel(baseSize)
 
 func _area_entered(body:Area3D) -> void:
-	if body.get_parent() is Ball:
+	if body.get_parent() is Ball and body.get_parent().ballTypeID == colliderBallID:
 		body.get_parent().collidedWithPadel(self)
 
 func collidedWithEdge(side:int) -> void:

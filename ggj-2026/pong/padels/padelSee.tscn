@@ -15,6 +15,7 @@ iconSprite = NodePath("SpaceIcon")
 area = NodePath("Area3D")
 moveSpeed = 5.0
 baseSize = 1.5
+colliderBallID = 1
 
 [node name="SpaceIcon" type="Sprite3D" parent="." unique_id=1277109727]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 1.187105, 0)
