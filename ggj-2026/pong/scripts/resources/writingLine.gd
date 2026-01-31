@@ -9,3 +9,4 @@ enum Speaker {
 @export var type:Speaker
 @export var duration:float
 @export var scriptLine:String
+@export var thoughtLine:String

@@ -2,6 +2,7 @@ extends Node
 class_name TextSpawner
 
 @export var dialogController: DialogController
+var nextPhaseSuccessDialog:bool = true
 
 func startSpawning(spawningScript:WritingLineChange, sceneManager:CombineSceneManager):
 	print("enter text start spawning")
