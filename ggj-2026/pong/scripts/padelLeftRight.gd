@@ -16,7 +16,8 @@ func _process(delta: float) -> void:
 	super._process(delta)
 	
 	if moving:
-		movePadel(Vector3.RIGHT.rotated(rotation.normalized(), rotation.x) * (moveSpeed if movingRight else -moveSpeed))
+		movePadel(Vector3.RIGHT * (moveSpeed if movingRight else -moveSpeed))
+		#movePadel(Vector3.RIGHT.rotated(rotation.normalized(), rotation.x) * (moveSpeed if movingRight else -moveSpeed)) #normalized errors, may bring back later
 	if !inBounds():
 		flipDirection()
 
