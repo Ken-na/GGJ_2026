@@ -2,7 +2,7 @@ extends Node3D
 class_name Ball
 
 @export var area:Area3D
-@export var velocity:Vector2 = Vector2(0, 0)
+var velocity:Vector2 = Vector2(0, 0)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -10,7 +10,16 @@ func _ready() -> void:
 
 func collidedWithPadel(padel:Padel) -> void:
 	velocity.y = -velocity.y
-	pass
+
+func position(bounds:Vector4) -> Vector2:
+	var randPos:Vector2 = Vector2(	bounds.x + randf()*(bounds.z - bounds.x),
+									bounds.y + randf()*(bounds.w - bounds.y))
+	transform.origin.x = randPos.x
+	transform.origin.y = randPos.y
+	
+	velocity.x = -3 + 6*randf()
+	velocity.y = -5
+	return randPos
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
