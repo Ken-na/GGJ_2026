@@ -1,30 +1,24 @@
 [gd_scene format=3 uid="uid://bgk2vx8xgyqex"]
 
-[ext_resource type="Script" uid="uid://beubkdyl0iuls" path="res://pong/scripts/spawningScript.gd" id="1_wbkha"]
+[ext_resource type="Script" uid="uid://dx0kqem4bxo8u" path="res://pong/scripts/pongView.gd" id="1_ostku"]
 [ext_resource type="PackedScene" uid="uid://b8q22n1vnmij6" path="res://pong/balls/ball.tscn" id="2_wwu4u"]
 [ext_resource type="PackedScene" uid="uid://cgeyegq61ouqq" path="res://pong/padel.tscn" id="3_ebrpb"]
-[ext_resource type="Script" uid="uid://cq24k5lsfcs3o" path="res://pong/scripts/ballSpawner.gd" id="4_wbkha"]
-[ext_resource type="Script" uid="uid://b4tjphbpqkoio" path="res://pong/scripts/spawnRateChange.gd" id="5_tw8q4"]
+[ext_resource type="Script" uid="uid://cq24k5lsfcs3o" path="res://pong/scripts/resources/ballSpawner.gd" id="3_wbkha"]
 
-[sub_resource type="Resource" id="Resource_tw8q4"]
-script = ExtResource("5_tw8q4")
-metadata/_custom_type_script = "uid://b4tjphbpqkoio"
-
-[node name="PongView" type="Node3D" unique_id=2027028987]
-script = ExtResource("1_wbkha")
-
-[node name="ball" parent="." unique_id=707752679 instance=ExtResource("2_wwu4u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4523687, 13.174832, 0)
-velocity = Vector2(0.1, -5)
+[node name="PongView" type="Node3D" unique_id=2027028987 node_paths=PackedStringArray("ballSpawner", "ballContainer")]
+script = ExtResource("1_ostku")
+topOfField = -16.0
+fieldWidth = 4.0
+ballSpawner = NodePath("BallSpawner")
+ballContainer = NodePath("ballRoot")
 
 [node name="padel" parent="." unique_id=795246886 instance=ExtResource("3_ebrpb")]
 
-[node name="BallSpawner" type="Node" parent="." unique_id=1251660253]
-script = ExtResource("4_wbkha")
-ballTypes = Array[PackedScene]([ExtResource("2_wwu4u")])
-metadata/_custom_type_script = "uid://cq24k5lsfcs3o"
+[node name="ballRoot" type="Node3D" parent="." unique_id=895334357]
 
-[node name="SpawningScript" type="Node" parent="." unique_id=1420049599]
-script = ExtResource("1_wbkha")
-spawnRateChanges = Array[ExtResource("5_tw8q4")]([SubResource("Resource_tw8q4")])
-metadata/_custom_type_script = "uid://beubkdyl0iuls"
+[node name="BallSpawner" type="Node" parent="." unique_id=730145500]
+script = ExtResource("3_wbkha")
+ballTypes = Dictionary[int, PackedScene]({
+0: ExtResource("2_wwu4u")
+})
+metadata/_custom_type_script = "uid://cq24k5lsfcs3o"

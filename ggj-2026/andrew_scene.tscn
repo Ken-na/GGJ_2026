@@ -1,10 +1,12 @@
 [gd_scene format=3 uid="uid://btnb6m86ntsq6"]
 
 [ext_resource type="PackedScene" uid="uid://bgk2vx8xgyqex" path="res://pong/pong_view.tscn" id="1_kayok"]
+[ext_resource type="Resource" uid="uid://c5ganr7xdqp78" path="res://pong/resources/testSpawning.tres" id="2_p7vhf"]
 
 [node name="AndrewScene" type="Node3D" unique_id=985336719]
 
 [node name="PongView" parent="." unique_id=2027028987 instance=ExtResource("1_kayok")]
+testSpawningScript = ExtResource("2_p7vhf")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=2134687739]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 21.594723)

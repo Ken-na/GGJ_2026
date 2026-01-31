@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="SpawningScript" format=3 uid="uid://c5ganr7xdqp78"]
+
+[ext_resource type="Script" uid="uid://beubkdyl0iuls" path="res://pong/scripts/resources/spawningScript.gd" id="1_e405w"]
+[ext_resource type="Script" uid="uid://b4tjphbpqkoio" path="res://pong/scripts/resources/spawnRateChange.gd" id="2_tm7b2"]
+
+[sub_resource type="Resource" id="Resource_e405w"]
+script = ExtResource("2_tm7b2")
+time = 10.0
+newRate = 10.0
+metadata/_custom_type_script = "uid://b4tjphbpqkoio"
+
+[resource]
+script = ExtResource("1_e405w")
+startingSpawnValues = Dictionary[int, float]({
+0: 1.0
+})
+spawnRateChanges = Array[ExtResource("2_tm7b2")]([SubResource("Resource_e405w")])
+metadata/_custom_type_script = "uid://beubkdyl0iuls"
