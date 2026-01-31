@@ -1,0 +1,7 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://cqf4v2f44dvds"]
+
+[ext_resource type="Shader" uid="uid://d1vk3yt5apiwx" path="res://shaders/emotionGlow.gdshader" id="1_xuovp"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_xuovp")

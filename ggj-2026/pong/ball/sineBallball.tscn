@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b82vxk5niiqvg"]
 
-[ext_resource type="Script" uid="uid://did22qhoim86v" path="res://sineBall.gd" id="1_kqxfq"]
+[ext_resource type="Script" uid="uid://did22qhoim86v" path="res://pong/ball/sineBall.gd" id="1_kqxfq"]
 [ext_resource type="Texture2D" uid="uid://w3vocvncc1fe" path="res://sprites/balls/Ball-16x16.png" id="2_kqxfq"]
 [ext_resource type="Shape3D" uid="uid://brunftramid2h" path="res://pong/ballShape.tres" id="3_hp74g"]
 
