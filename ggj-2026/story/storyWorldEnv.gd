@@ -57,6 +57,12 @@ func moveScene(delta:float):
 
 func startSpawningText(script: WritingLineChange):
 	textSpawner.startSpawning(script)
-	
+
+func failedPhase():
+	textSpawner.nextPhaseSuccessDialog = false
+
+func passedPhase():
+	textSpawner.nextPhaseSuccessDialog = true
+
 #func showText(lineToShow: WritingLine):
 #	dialogController.showText(lineToShow);
