@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://bjb3v37a2bxjf"]
+
+[ext_resource type="Script" uid="uid://de3q3poetfgsd" path="res://story/storyWorldEnv.gd" id="1_r5g4u"]
+[ext_resource type="Script" uid="uid://c6ej8bi4muex2" path="res://pong/scripts/textSpawner.gd" id="2_ceikx"]
+[ext_resource type="Texture2D" uid="uid://dnoslvo81sb5l" path="res://sprites/characters/Player-sprite.png" id="3_ceikx"]
+[ext_resource type="Texture2D" uid="uid://bjabuilwucqtn" path="res://icon.svg" id="3_jjbvn"]
+[ext_resource type="PackedScene" uid="uid://6wwevf502q7a" path="res://story/3D_Assets/Out/Hallway.glb" id="4_bllyj"]
+[ext_resource type="Script" uid="uid://c1lfd3mn7ehiw" path="res://pong/scripts/faceCamera.gd" id="4_jjbvn"]
+[ext_resource type="Script" uid="uid://2tiy4pfapg8m" path="res://story/dialogController.gd" id="5_bilnc"]
+
+[node name="StoryView" type="Node3D" unique_id=1344410322 node_paths=PackedStringArray("textSpawner", "hallWayToMove")]
+script = ExtResource("1_r5g4u")
+textSpawner = NodePath("TextSpawner")
+hallWayToMove = NodePath("SceneContainer")
+positions = Array[Vector3]([Vector3(0, 0, 0), Vector3(-20, 0, 0)])
+
+[node name="TextSpawner" type="Node" parent="." unique_id=441583476 node_paths=PackedStringArray("dialogController")]
+script = ExtResource("2_ceikx")
+dialogController = NodePath("../DialogContainer")
+
+[node name="Node3D" type="Node3D" parent="." unique_id=1029084511]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -2.8976693, -14.931569, 0)
+script = ExtResource("4_jjbvn")
+
+[node name="Sprite3D" type="Sprite3D" parent="Node3D" unique_id=953519282]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 1.2388747, 0)
+pixel_size = 0.0625
+texture_filter = 0
+texture = ExtResource("3_ceikx")
+
+[node name="SceneContainer" type="Node3D" parent="." unique_id=1185964989]
+
+[node name="Hallway" parent="SceneContainer" unique_id=820862294 instance=ExtResource("4_bllyj")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, -15, 0)
+
+[node name="Hallway2" parent="SceneContainer" unique_id=1096569386 instance=ExtResource("4_bllyj")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 100, -15, 0)
+
+[node name="Hallway3" parent="SceneContainer" unique_id=794521447 instance=ExtResource("4_bllyj")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 200, -15, 0)
+
+[node name="DialogContainer" type="Node3D" parent="." unique_id=51484136 node_paths=PackedStringArray("label")]
+script = ExtResource("5_bilnc")
+label = NodePath("Label3D")
+
+[node name="Label3D" type="Label3D" parent="DialogContainer" unique_id=1317876910]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3, 0)
+text = "HELLO WORLD HELLO WORLD HELLO WORLD HELLO WORLD HELLO WORLD HELLO WORLD HELLO WORLD HELLO WORLD HELLO WORLD HELLO WORLD HELLO WORLD HELLO WORLD HELLO WORLD HELLO WORLD HELLO WORLD HELLO WORLD HELLO WORLD HELLO WORLD HELLO WORLD HELLO WORLD HELLO WORLD HELLO WORLD HELLO WORLD HELLO WORLD "
+font_size = 160
+autowrap_mode = 2
+justification_flags = 35
+width = 7500.0
+
+[node name="Sprite3D" type="Sprite3D" parent="DialogContainer" unique_id=267123016]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -22.01967, -2.6922204, 0)
+texture = ExtResource("3_jjbvn")
+
+[node name="Sprite3D2" type="Sprite3D" parent="DialogContainer" unique_id=2110219488]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 22.437887, -2.6922204, 0)
+texture = ExtResource("3_jjbvn")

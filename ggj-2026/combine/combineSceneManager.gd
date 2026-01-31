@@ -7,7 +7,9 @@ class_name CombineSceneManager
 @export var fullScript: WritingScript
 
 @export var cameraPosPong: Vector3
+@export var cameraRotationPong: float
 @export var cameraPosStory: Vector3
+@export var cameraRotationStory: float
 var cameraMoveSpeed: float = 1
 
 #var moveTime: float = 3
@@ -18,7 +20,7 @@ var currentScriptIndex: int = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pongView.process_mode = Node.PROCESS_MODE_DISABLED	
+	pongView.setRunning(false)
 	
 	print("cam pos: ", cam.position)
 	cam.position = cameraPosStory
@@ -36,12 +38,13 @@ func moveCameraToPong():
 	
 	while movePerc < 1:
 		cam.position = cameraPosStory.lerp((cameraPosPong), movePerc)
+		cam.rotation.x = lerp(cameraRotationStory, cameraRotationPong, movePerc)
 		movePerc += get_process_delta_time() * cameraMoveSpeed
 		await get_tree().process_frame
 		
  
 func resumeStory():
-	pongView.process_mode = Node.PROCESS_MODE_DISABLED	
+	pongView.setRunning(false)
 	await get_tree().create_timer(.5).timeout
 	
 	#wait then move
@@ -52,6 +55,7 @@ func moveCameraToStory():
 	
 	while movePerc < 1:
 		cam.position = cameraPosPong.lerp((cameraPosStory), movePerc)
+		cam.rotation.x = lerp(cameraRotationPong, cameraRotationStory, movePerc)
 		movePerc += get_process_delta_time() * cameraMoveSpeed
 		await get_tree().process_frame
 	
@@ -64,10 +68,13 @@ func finishedStoryWalking():
 	#introduction bump 
 	await get_tree().create_timer(1.0).timeout
 	#wait then move
+	print(fullScript.writingLineChanges[currentScriptIndex].scriptTitle)
+	if fullScript.writingLineChanges[currentScriptIndex].level != null:
+		pongView.startLevel(fullScript.writingLineChanges[currentScriptIndex].level)
 	await moveCameraToPong()
 	#move is finished
 	
 	#resume calculations
-	pongView.process_mode = Node.PROCESS_MODE_ALWAYS
+	pongView.setRunning(true)
 	#ballSpawner.startSpawning(spawningScript, self) #TODO MOVE THIS HERE!
 	pass

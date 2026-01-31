@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://datag10aelusj"]
+
+[ext_resource type="PackedScene" uid="uid://ca0whf7l0j0d6" path="res://pong/pong_view_andrew.tscn" id="1_4u3hy"]
+[ext_resource type="Script" uid="uid://dvyltx743lx0t" path="res://combine/combineSceneManager.gd" id="1_wh044"]
+[ext_resource type="Resource" uid="uid://sonxmk0cgvbd" path="res://pong/resources/writingEncounters.tres" id="2_jovnt"]
+[ext_resource type="PackedScene" uid="uid://bjb3v37a2bxjf" path="res://story/story_viewAndrew.tscn" id="5_cjb3u"]
+
+[node name="BigScene" type="Node3D" unique_id=703525007 node_paths=PackedStringArray("cam", "storyView", "pongView")]
+script = ExtResource("1_wh044")
+cam = NodePath("Camera3D")
+storyView = NodePath("StoryView")
+pongView = NodePath("PongView")
+fullScript = ExtResource("2_jovnt")
+cameraPosPong = Vector3(0.6723796, -8.336965, 8.496321)
+cameraRotationPong = 0.61
+cameraPosStory = Vector3(0, -4.2335873, 12)
+cameraRotationStory = -0.42
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=781766782]
+transform = Transform3D(1, 0, 0, 0, 0.9135454, 0.40673664, 0, -0.40673664, 0.9135454, 0, -4.2335873, 12)
+
+[node name="PongView" parent="." unique_id=2027028987 instance=ExtResource("1_4u3hy")]
+transform = Transform3D(1, 0, 0, 0, 0.81915206, -0.57357645, 0, 0.57357645, 0.81915206, 0, 5.3357677, -12.392563)
+topOfField = 20.0
+fieldWidth = 24.0
+testSpawningScript = null
+
+[node name="StoryView" parent="." unique_id=1864827925 node_paths=PackedStringArray("sceneManager") instance=ExtResource("5_cjb3u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.973754, 0)
+sceneManager = NodePath("..")
