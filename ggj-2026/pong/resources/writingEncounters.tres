@@ -1,0 +1,34 @@
+[gd_resource type="Resource" script_class="WritingScript" format=3 uid="uid://sonxmk0cgvbd"]
+
+[ext_resource type="Script" uid="uid://dhdg27nsrhi2v" path="res://pong/scripts/resources/writingScript.gd" id="1_weh2r"]
+[ext_resource type="Script" uid="uid://bwiyk0soex6va" path="res://pong/scripts/resources/writingLineChange.gd" id="2_air5t"]
+[ext_resource type="Script" uid="uid://6iyv47nkdjxy" path="res://pong/scripts/resources/writingLine.gd" id="3_air5t"]
+
+[sub_resource type="Resource" id="Resource_ykrqt"]
+script = ExtResource("3_air5t")
+scriptLine = "hello world"
+metadata/_custom_type_script = "uid://6iyv47nkdjxy"
+
+[sub_resource type="Resource" id="Resource_i34uy"]
+script = ExtResource("3_air5t")
+type = 1
+time = 2.0
+scriptLine = "!!!!!!!!"
+metadata/_custom_type_script = "uid://6iyv47nkdjxy"
+
+[sub_resource type="Resource" id="Resource_2wy1d"]
+script = ExtResource("3_air5t")
+time = 6.0
+scriptLine = "hm,,,,,, yes6"
+metadata/_custom_type_script = "uid://6iyv47nkdjxy"
+
+[sub_resource type="Resource" id="Resource_achy1"]
+script = ExtResource("2_air5t")
+scriptTitle = "First Encounter"
+scriptLines = Array[ExtResource("3_air5t")]([SubResource("Resource_ykrqt"), SubResource("Resource_i34uy"), SubResource("Resource_2wy1d")])
+metadata/_custom_type_script = "uid://bwiyk0soex6va"
+
+[resource]
+script = ExtResource("1_weh2r")
+writingLineChanges = Array[ExtResource("2_air5t")]([SubResource("Resource_achy1")])
+metadata/_custom_type_script = "uid://beubkdyl0iuls"

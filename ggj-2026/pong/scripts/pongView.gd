@@ -47,18 +47,18 @@ func _ready() -> void:
 	botCollidor.monitoring = true
 	botCollidor.area_entered.connect(_bottom_entered)
 	
+	for child in get_children():
+		if child is Padel:
+			addPadel(child)
+	
 	startSpawning(testSpawningScript)
 
 func _left_entered(body:Area3D) -> void:
 	if body.get_parent() is Ball:
 		body.get_parent().collidedWithEdge(-1)
-	elif body.get_parent() is Padel:
-		body.get_parent().collidedWithEdge(-1)
 		
 func _right_entered(body:Area3D) -> void:
 	if body.get_parent() is Ball:
-		body.get_parent().collidedWithEdge(1)
-	elif body.get_parent() is Padel:
 		body.get_parent().collidedWithEdge(1)
 		
 func _top_entered(body:Area3D) -> void:
@@ -71,6 +71,7 @@ func _bottom_entered(body:Area3D) -> void:
 		
 func addPadel(padel:Padel) -> void:
 	padels.append(padel)
+	padel.pongView = self
 
 func addBall(ball:Ball) -> void:
 	balls.append(ball)
