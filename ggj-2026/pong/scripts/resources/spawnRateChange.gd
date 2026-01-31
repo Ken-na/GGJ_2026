@@ -3,10 +3,7 @@ class_name SpawnRateChange
 
 enum BallType {
 	test,
-	sineBall,
-	repeatBall,
-	avoidantBall
-	
+	sine
 }
 
 @export var type:BallType

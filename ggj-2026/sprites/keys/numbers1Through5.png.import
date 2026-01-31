@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dpgl3d63up502"
-path.s3tc="res://.godot/imported/spacebar.png-0dc7a9758ee552296698cf399b0e8416.s3tc.ctex"
+uid="uid://jpwfj5ve2tck"
+path.s3tc="res://.godot/imported/numbers1Through5.png-5eec59cd5e8b853d6c3852431a7ca38c.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://sprites/keys/spacebar.png"
-dest_files=["res://.godot/imported/spacebar.png-0dc7a9758ee552296698cf399b0e8416.s3tc.ctex"]
+source_file="res://sprites/keys/numbers1Through5.png"
+dest_files=["res://.godot/imported/numbers1Through5.png-5eec59cd5e8b853d6c3852431a7ca38c.s3tc.ctex"]
 
 [params]
 
