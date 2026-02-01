@@ -1,26 +1,9 @@
 extends AudioStreamPlayer
 
-const walking_music = preload("res://Audio/Short Walking Placeholder.ogg")
-const pong_music = preload("res://Audio/Mask-Edit1.ogg")
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	AudioStreamPlayer.play() # Replace with function body.
 
-func _play_music(music: AudioStream, volume = 0.0):
-	if stream == music:
-		return
-	
-	stream = music
-	volume_db = volume
-	play()
-	
-func play_music_level():
-	stop_current_music()
-	_play_music(walking_music)
-
-func play_pong_music():
-	stop_current_music()
-	_play_music(pong_music)
-	if stream == pong_music:
-		return
-	
-func stop_current_music():
-	stop()
-	
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass

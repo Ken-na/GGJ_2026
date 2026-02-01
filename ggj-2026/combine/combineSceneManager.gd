@@ -18,11 +18,9 @@ var moveSpeed: float = .25
 
 var currentScriptIndex: int = 0
 
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pongView.setRunning(false)
-	Audio_Player.play_music_level()
 	
 	print("cam pos: ", cam.position)
 	cam.position = cameraPosStory
@@ -30,12 +28,12 @@ func _ready() -> void:
 	
 	pass # Replace with function body.
 
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
 
 func moveCameraToPong():
-	Audio_Player.play_pong_music()
 	var movePerc: float = 0
 	
 	while movePerc < 1:
@@ -46,7 +44,6 @@ func moveCameraToPong():
 		
  
 func resumeStory():
-	Audio_Player.play_music_level()
 	#currentScriptIndex = clamp(currentScriptIndex + 1, 0, fullScript.writingLineChanges.size() - 1)
 	currentScriptIndex = currentScriptIndex + 1
 	

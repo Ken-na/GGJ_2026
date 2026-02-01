@@ -21,10 +21,6 @@ var balls:Array[Ball]
 
 var acceptedBall:SpawnRateChange.BallType = -1
 
-const sfxGrow = preload("res://Audio/Sfx6.ogg")
-
-const sfxShrink = preload("res://Audio/Sfx5.ogg")
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	background.position.y = topOfField/2
@@ -78,8 +74,6 @@ func _bottom_entered(body:Area3D) -> void:
 			growPanels(body.get_parent())
 
 func growPanels(ball:Ball):
-	print("grow hit")
-	play_sfx(sfxGrow)
 	for padel:Padel in padels:
 		if padel.colliderBallID == ball.ballTypeID:
 			if padel.enabled == false:
@@ -87,7 +81,6 @@ func growPanels(ball:Ball):
 			padel.incrementSize()
 
 func shrinkPanels(ball:Ball):
-	play_sfx(sfxShrink)
 	for padel:Padel in padels:
 		if padel.colliderBallID == ball.ballTypeID:
 			padel.decrementSize()
@@ -120,15 +113,3 @@ func setRunning(running:bool):
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
-
-func play_sfx(sound: AudioStream, parent: Node = get_tree().current_scene,
- 		pitch_range: Vector2 = Vector2(1.0,1.0), volume_db: float = 1):
-	if sound != null and parent != null:
-		var stream_player = AudioStreamPlayer.new()
-
-		stream_player.stream = sound
-		stream_player.pitch_scale = randf_range(pitch_range.x, pitch_range.y)
-		stream_player.volume_db = volume_db
-
-		parent.add_child(stream_player)
-		stream_player.play()

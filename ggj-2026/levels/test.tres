@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Level" format=3 uid="uid://bcichcgr7d8dp"]
 
-[ext_resource type="Script" path="res://pong/scripts/resources/level.gd" id="1_x3cmq"]
+[ext_resource type="Script" uid="uid://838ma1k4qbj2" path="res://pong/scripts/resources/level.gd" id="1_x3cmq"]
 [ext_resource type="Script" uid="uid://beubkdyl0iuls" path="res://pong/scripts/resources/spawningScript.gd" id="2_6yo27"]
 [ext_resource type="Script" uid="uid://b4tjphbpqkoio" path="res://pong/scripts/resources/spawnRateChange.gd" id="3_c0uh0"]
 
