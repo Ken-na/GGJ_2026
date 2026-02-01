@@ -34,7 +34,6 @@ func _process(delta: float) -> void:
 		for type:SpawnRateChange.BallType in SpawnRateChange.BallType.size():
 			var spawnRate = mSpawningScript.getSpawnRate(type, timePassed)
 			ballSpawnProgress[type] = ballSpawnProgress[type] + delta*spawnRate*randf()
-			
 			while ballSpawnProgress[type] > 1:
 				spawnBall(type)
 				ballSpawnProgress[type] = ballSpawnProgress[type] - 1

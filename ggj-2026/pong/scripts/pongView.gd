@@ -91,7 +91,7 @@ func addPadel(padel:Padel) -> void:
 
 func addBall(ball:Ball) -> void:
 	balls.append(ball)
-	ball.initialPosition(Vector4(-fieldWidth/2, topOfField - 1.5, fieldWidth/2, topOfField - 1.5))
+	ball.initialPosition(Vector4(-fieldWidth/2 + 2, topOfField - 1.5, fieldWidth/2 - 2, topOfField - 1.5))
 	ballContainer.add_child(ball)
 
 func startSpawning(spawningScript:SpawningScript) -> void:
