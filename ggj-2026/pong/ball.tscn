@@ -4,7 +4,7 @@
 [ext_resource type="Material" uid="uid://cqf4v2f44dvds" path="res://shaders/emotionGlow.tres" id="2_2bpn0"]
 [ext_resource type="Texture2D" uid="uid://dtqo2jbevudeg" path="res://sprites/balls/Default-ball.png" id="3_2bpn0"]
 [ext_resource type="Shape3D" uid="uid://brunftramid2h" path="res://pong/ballShape.tres" id="3_r4lux"]
-[ext_resource type="PackedScene" path="res://pong/ballSpark.tscn" id="4_to5l4"]
+[ext_resource type="PackedScene" uid="uid://sujrdyaw0e0c" path="res://pong/ballSpark.tscn" id="4_to5l4"]
 
 [node name="ball" type="Node3D" unique_id=707752679 node_paths=PackedStringArray("area", "sparks", "spriteToGlow")]
 script = ExtResource("1_vsl55")
@@ -21,6 +21,7 @@ texture_filter = 0
 texture = ExtResource("3_2bpn0")
 
 [node name="GPUParticles3D" parent="Sprite3D" unique_id=318749315 instance=ExtResource("4_to5l4")]
+local_coords = true
 
 [node name="Area3D" type="Area3D" parent="." unique_id=40941805]
 
