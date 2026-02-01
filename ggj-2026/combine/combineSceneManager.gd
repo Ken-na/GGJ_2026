@@ -44,6 +44,8 @@ func moveCameraToPong():
 		
  
 func resumeStory():
+	currentScriptIndex = clamp(currentScriptIndex + 1, 0, fullScript.writingLineChanges.size() - 1)
+	
 	await get_tree().create_timer(.5).timeout
 	pongView.setRunning(false)
 	
