@@ -29,6 +29,7 @@ texture_filter = 0
 texture = ExtResource("2_1cycq")
 
 [node name="GPUParticles3D" parent="Sprite3D" unique_id=318749315 instance=ExtResource("3_7jaoh")]
+local_coords = true
 
 [node name="Area3D" type="Area3D" parent="." unique_id=40941805]
 
