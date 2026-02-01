@@ -2,9 +2,32 @@
 
 [ext_resource type="Script" uid="uid://d3af3srauotrd" path="res://pong/scripts/padelLeftRight.gd" id="1_0y1ew"]
 [ext_resource type="Texture2D" uid="uid://dpgl3d63up502" path="res://sprites/keys/spacebar.png" id="2_8gf2f"]
-[ext_resource type="Texture2D" uid="uid://dujj7h4fsj5e6" path="res://sprites/paddle/paddle-end-16x16.png" id="2_maj62"]
 [ext_resource type="Shape3D" uid="uid://bqkxtsnd3kqqp" path="res://pong/padels/base.tres" id="3_2q311"]
-[ext_resource type="Texture2D" uid="uid://bfbwi3bxnca6s" path="res://sprites/paddle/paddle-mid-16x16.png" id="3_8gf2f"]
+[ext_resource type="Texture2D" uid="uid://ch5ur42b03cbn" path="res://sprites/paddle/Paddle-Default.png" id="3_kt4pc"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_maj62"]
+particle_flag_disable_z = true
+emission_shape_offset = Vector3(0, 0.25, 0)
+spread = 0.0
+initial_velocity_min = 1.0
+initial_velocity_max = 5.0
+gravity = Vector3(0, 0, 0)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8gf2f"]
+transparency = 1
+albedo_texture = ExtResource("3_kt4pc")
+
+[sub_resource type="QuadMesh" id="QuadMesh_kt4pc"]
+material = SubResource("StandardMaterial3D_8gf2f")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_h3xno"]
+particle_flag_disable_z = true
+emission_shape_offset = Vector3(0, 0.25, 0)
+direction = Vector3(-1, 0, 0)
+spread = 0.0
+initial_velocity_min = 1.0
+initial_velocity_max = 5.0
+gravity = Vector3(0, 0, 0)
 
 [node name="padel" type="Node3D" unique_id=795246886 node_paths=PackedStringArray("leftSprite", "middleSprite", "rightSprite", "iconSprite", "area")]
 script = ExtResource("1_0y1ew")
@@ -13,7 +36,6 @@ middleSprite = NodePath("Middle")
 rightSprite = NodePath("Right")
 iconSprite = NodePath("SpaceIcon")
 area = NodePath("Area3D")
-moveSpeed = null
 
 [node name="SpaceIcon" type="Sprite3D" parent="." unique_id=1277109727]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 1.187105, 0)
@@ -23,18 +45,28 @@ texture = ExtResource("2_8gf2f")
 [node name="Left" type="Sprite3D" parent="." unique_id=814584427]
 pixel_size = 0.0625
 texture_filter = 0
-texture = ExtResource("2_maj62")
+texture = ExtResource("3_kt4pc")
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="Left" unique_id=1390004775]
+local_coords = true
+process_material = SubResource("ParticleProcessMaterial_maj62")
+draw_pass_1 = SubResource("QuadMesh_kt4pc")
 
 [node name="Middle" type="Sprite3D" parent="." unique_id=1761826639]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6070426, 0, 0)
 pixel_size = 0.0625
 texture_filter = 0
-texture = ExtResource("3_8gf2f")
 
 [node name="Right" type="Sprite3D" parent="." unique_id=449525947]
 flip_h = true
 pixel_size = 0.0625
 texture_filter = 0
-texture = ExtResource("2_maj62")
+texture = ExtResource("3_kt4pc")
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="Right" unique_id=729116832]
+local_coords = true
+process_material = SubResource("ParticleProcessMaterial_h3xno")
+draw_pass_1 = SubResource("QuadMesh_kt4pc")
 
 [node name="Area3D" type="Area3D" parent="." unique_id=299177442]
 
