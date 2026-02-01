@@ -9,6 +9,8 @@ class_name Ball
 @export var sparks:GPUParticles3D
 
 
+@export var spriteToGlow:Sprite3D
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	area.monitorable = true
@@ -20,7 +22,11 @@ func collidedWithPadel(padel:Padel) -> void:
 
 func collidedWithEdge(side:int) -> void:
 	velocity.x = -velocity.x
-	
+
+func addGlow():
+	#spriteToGlow.material_overlay.set_shader_parameter("active", true)
+	pass
+
 func goneOffTop() -> void:
 	queue_free()
 	
