@@ -4,22 +4,25 @@
 [ext_resource type="Script" uid="uid://bwiyk0soex6va" path="res://pong/scripts/resources/writingLineChange.gd" id="2_air5t"]
 [ext_resource type="Script" uid="uid://6iyv47nkdjxy" path="res://pong/scripts/resources/writingLine.gd" id="3_air5t"]
 [ext_resource type="Resource" uid="uid://bcichcgr7d8dp" path="res://levels/test.tres" id="3_ykrqt"]
+[ext_resource type="Script" uid="uid://838ma1k4qbj2" path="res://pong/scripts/resources/level.gd" id="5_nrdi7"]
+[ext_resource type="Script" uid="uid://beubkdyl0iuls" path="res://pong/scripts/resources/spawningScript.gd" id="6_355b5"]
+[ext_resource type="Script" uid="uid://b4tjphbpqkoio" path="res://pong/scripts/resources/spawnRateChange.gd" id="7_qkdpk"]
 
 [sub_resource type="Resource" id="Resource_ykrqt"]
 script = ExtResource("3_air5t")
 duration = 20.0
-scriptLine = "I can change for her. I'm sure of it!"
+scriptLine = "Hey Kid. You believe in second chances, right?"
 
 [sub_resource type="Resource" id="Resource_i34uy"]
 script = ExtResource("3_air5t")
 type = 1
 duration = 15.0
-scriptLine = "All relationships have their speed bumps."
+scriptLine = " I can change for her. I'm sure of it!"
 
 [sub_resource type="Resource" id="Resource_2wy1d"]
 script = ExtResource("3_air5t")
 duration = 15.0
-scriptLine = "Deep down, I'm sure her and I were meant to be together."
+scriptLine = "All relationships have their speed bumps..."
 
 [sub_resource type="Resource" id="Resource_achy1"]
 script = ExtResource("2_air5t")
@@ -27,7 +30,143 @@ scriptTitle = "First Encounter"
 level = ExtResource("3_ykrqt")
 scriptLines = Array[ExtResource("3_air5t")]([SubResource("Resource_ykrqt"), SubResource("Resource_i34uy"), SubResource("Resource_2wy1d")])
 
+[sub_resource type="Resource" id="Resource_ap3yx"]
+script = ExtResource("7_qkdpk")
+metadata/_custom_type_script = "uid://b4tjphbpqkoio"
+
+[sub_resource type="Resource" id="Resource_g38io"]
+script = ExtResource("6_355b5")
+spawnRateChanges = Array[ExtResource("7_qkdpk")]([SubResource("Resource_ap3yx")])
+metadata/_custom_type_script = "uid://beubkdyl0iuls"
+
+[sub_resource type="Resource" id="Resource_8ymsg"]
+script = ExtResource("5_nrdi7")
+spawnScript = SubResource("Resource_g38io")
+metadata/_custom_type_script = "uid://838ma1k4qbj2"
+
+[sub_resource type="Resource" id="Resource_awtqn"]
+script = ExtResource("3_air5t")
+scriptLine = "Hi! W-want to be friends? I pay premium hourly rates!"
+metadata/_custom_type_script = "uid://6iyv47nkdjxy"
+
+[sub_resource type="Resource" id="Resource_ak6xg"]
+script = ExtResource("3_air5t")
+scriptLine = "Any exposure you can get is good exposure."
+metadata/_custom_type_script = "uid://6iyv47nkdjxy"
+
+[sub_resource type="Resource" id="Resource_biycq"]
+script = ExtResource("3_air5t")
+scriptLine = "A-Are you going to the Yacht club party this weekend? I am. Owning a yacht isn't a requirement, right?"
+metadata/_custom_type_script = "uid://6iyv47nkdjxy"
+
+[sub_resource type="Resource" id="Resource_jqi1u"]
+script = ExtResource("2_air5t")
+scriptTitle = "Second Encounter"
+level = SubResource("Resource_8ymsg")
+scriptLines = Array[ExtResource("3_air5t")]([SubResource("Resource_awtqn"), SubResource("Resource_ak6xg"), SubResource("Resource_biycq")])
+metadata/_custom_type_script = "uid://bwiyk0soex6va"
+
+[sub_resource type="Resource" id="Resource_waxph"]
+script = ExtResource("6_355b5")
+metadata/_custom_type_script = "uid://beubkdyl0iuls"
+
+[sub_resource type="Resource" id="Resource_2tiwx"]
+script = ExtResource("5_nrdi7")
+spawnScript = SubResource("Resource_waxph")
+metadata/_custom_type_script = "uid://838ma1k4qbj2"
+
+[sub_resource type="Resource" id="Resource_3er7j"]
+script = ExtResource("3_air5t")
+scriptLine = "Hey, question. How do you learn to \"like\" boys?"
+metadata/_custom_type_script = "uid://6iyv47nkdjxy"
+
+[sub_resource type="Resource" id="Resource_7g1m3"]
+script = ExtResource("3_air5t")
+scriptLine = "Um, it's not gay when girls kiss other girls!"
+metadata/_custom_type_script = "uid://6iyv47nkdjxy"
+
+[sub_resource type="Resource" id="Resource_g1eth"]
+script = ExtResource("3_air5t")
+scriptLine = "When I get into uni, I'm gonna learn how to turn girls into guys."
+metadata/_custom_type_script = "uid://6iyv47nkdjxy"
+
+[sub_resource type="Resource" id="Resource_nrdi7"]
+script = ExtResource("3_air5t")
+scriptLine = "Fine. I think Janet's pretty. Like, MEGA pretty. I'm tired of pretending she's not."
+metadata/_custom_type_script = "uid://6iyv47nkdjxy"
+
+[sub_resource type="Resource" id="Resource_3omql"]
+script = ExtResource("2_air5t")
+level = SubResource("Resource_2tiwx")
+scriptLines = Array[ExtResource("3_air5t")]([SubResource("Resource_3er7j"), SubResource("Resource_7g1m3"), SubResource("Resource_g1eth"), SubResource("Resource_nrdi7")])
+metadata/_custom_type_script = "uid://bwiyk0soex6va"
+
+[sub_resource type="Resource" id="Resource_fxyie"]
+script = ExtResource("5_nrdi7")
+metadata/_custom_type_script = "uid://838ma1k4qbj2"
+
+[sub_resource type="Resource" id="Resource_cyiik"]
+script = ExtResource("3_air5t")
+scriptLine = "Good grades are all I need! Well, that's what my parents taught me."
+metadata/_custom_type_script = "uid://6iyv47nkdjxy"
+
+[sub_resource type="Resource" id="Resource_ta5dl"]
+script = ExtResource("3_air5t")
+scriptLine = "*Sigh* I'd like to get glasses... but I don't people to think I'm a nerd!"
+metadata/_custom_type_script = "uid://6iyv47nkdjxy"
+
+[sub_resource type="Resource" id="Resource_6cmal"]
+script = ExtResource("3_air5t")
+scriptLine = "I want to go to his party, but is it really worth skipping study for tomorrow's test?"
+metadata/_custom_type_script = "uid://6iyv47nkdjxy"
+
+[sub_resource type="Resource" id="Resource_355b5"]
+script = ExtResource("3_air5t")
+scriptLine = "I made no friends at my old school, even though I got straight As. Maybe I should start looking at things differently!"
+metadata/_custom_type_script = "uid://6iyv47nkdjxy"
+
+[sub_resource type="Resource" id="Resource_bp11r"]
+script = ExtResource("2_air5t")
+level = SubResource("Resource_fxyie")
+scriptLines = Array[ExtResource("3_air5t")]([SubResource("Resource_cyiik"), SubResource("Resource_ta5dl"), SubResource("Resource_6cmal"), SubResource("Resource_355b5")])
+metadata/_custom_type_script = "uid://bwiyk0soex6va"
+
+[sub_resource type="Resource" id="Resource_m48d7"]
+script = ExtResource("5_nrdi7")
+metadata/_custom_type_script = "uid://838ma1k4qbj2"
+
+[sub_resource type="Resource" id="Resource_5eaq3"]
+script = ExtResource("3_air5t")
+scriptLine = "Check out my stick-and-poke tattoo! Cool, right?"
+metadata/_custom_type_script = "uid://6iyv47nkdjxy"
+
+[sub_resource type="Resource" id="Resource_mmgnk"]
+script = ExtResource("3_air5t")
+scriptLine = "Of course I'm gonna try these pills. Everyone does it at least once!"
+metadata/_custom_type_script = "uid://6iyv47nkdjxy"
+
+[sub_resource type="Resource" id="Resource_fixeu"]
+script = ExtResource("3_air5t")
+scriptLine = "I'm gonna ride my bike off the roof this arvo. Wanna watch?"
+metadata/_custom_type_script = "uid://6iyv47nkdjxy"
+
+[sub_resource type="Resource" id="Resource_nuce1"]
+script = ExtResource("3_air5t")
+scriptLine = "Should I actually watch a bike rally before doing one myself?"
+metadata/_custom_type_script = "uid://6iyv47nkdjxy"
+
+[sub_resource type="Resource" id="Resource_f0hsf"]
+script = ExtResource("3_air5t")
+scriptLine = "I've, um, never hung out at someone else's place. Do you think I could...?"
+metadata/_custom_type_script = "uid://6iyv47nkdjxy"
+
+[sub_resource type="Resource" id="Resource_y44jp"]
+script = ExtResource("2_air5t")
+level = SubResource("Resource_m48d7")
+scriptLines = Array[ExtResource("3_air5t")]([SubResource("Resource_5eaq3"), SubResource("Resource_mmgnk"), SubResource("Resource_fixeu"), SubResource("Resource_nuce1"), SubResource("Resource_f0hsf")])
+metadata/_custom_type_script = "uid://bwiyk0soex6va"
+
 [resource]
 script = ExtResource("1_weh2r")
-writingLineChanges = Array[ExtResource("2_air5t")]([SubResource("Resource_achy1")])
+writingLineChanges = Array[ExtResource("2_air5t")]([SubResource("Resource_achy1"), SubResource("Resource_jqi1u"), SubResource("Resource_3omql"), SubResource("Resource_bp11r"), SubResource("Resource_y44jp")])
 metadata/_custom_type_script = "uid://beubkdyl0iuls"
