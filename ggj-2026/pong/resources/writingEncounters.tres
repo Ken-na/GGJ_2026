@@ -1,8 +1,8 @@
 [gd_resource type="Resource" script_class="WritingScript" format=3 uid="uid://sonxmk0cgvbd"]
 
-[ext_resource type="Script" uid="uid://dhdg27nsrhi2v" path="res://pong/scripts/resources/writingScript.gd" id="1_weh2r"]
-[ext_resource type="Script" uid="uid://bwiyk0soex6va" path="res://pong/scripts/resources/writingLineChange.gd" id="2_air5t"]
-[ext_resource type="Script" uid="uid://6iyv47nkdjxy" path="res://pong/scripts/resources/writingLine.gd" id="3_air5t"]
+[ext_resource type="Script" path="res://pong/scripts/resources/writingScript.gd" id="1_weh2r"]
+[ext_resource type="Script" path="res://pong/scripts/resources/writingLineChange.gd" id="2_air5t"]
+[ext_resource type="Script" path="res://pong/scripts/resources/writingLine.gd" id="3_air5t"]
 [ext_resource type="Resource" uid="uid://bcichcgr7d8dp" path="res://levels/test.tres" id="3_ykrqt"]
 
 [sub_resource type="Resource" id="Resource_ykrqt"]

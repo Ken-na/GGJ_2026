@@ -7,6 +7,8 @@ class_name Ball
 @export var horizontalSpeed:float = 1.0
 @export var ballTypeID:SpawnRateChange.BallType
 
+const sfxBounce = preload("res://Audio/Mask SFX2.wav")
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	area.monitorable = true
