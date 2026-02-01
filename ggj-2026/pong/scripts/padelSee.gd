@@ -8,7 +8,6 @@ var moving:bool = false
 @export var middleSprite:Sprite3D
 @export var rightSprite:Sprite3D
 @export var iconSprite:Sprite3D
-
 #this padel only moves when holding space, flips direction when press space, flips directions on bound.
 
 # Called when the node enters the scene tree for the first time.
