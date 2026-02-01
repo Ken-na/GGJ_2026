@@ -11,7 +11,7 @@ var movingToNextScene:bool = false
 
 #var moveTime: float = 3
 var movePerc: float = 0
-var moveSpeed: float = 200
+var moveSpeed: float = 0.25
 
 
 # Called when the node enters the scene tree for the first time.

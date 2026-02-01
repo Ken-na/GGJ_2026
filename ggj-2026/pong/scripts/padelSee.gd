@@ -28,9 +28,6 @@ func _process(delta: float) -> void:
 	if !moving:
 		return
 
-	print(abs(abs(position.x) - abs(movingToXPos)), " < ", moveSpeed)
-	print(position.x, " - ", movingToXPos)
-	
 	var diff:float = 0
 	if position.x > movingToXPos:
 		diff = abs(position.x - movingToXPos)

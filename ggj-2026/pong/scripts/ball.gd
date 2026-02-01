@@ -6,6 +6,8 @@ class_name Ball
 @export var verticalSpeed:float = 1.0
 @export var horizontalSpeed:float = 1.0
 @export var ballTypeID:SpawnRateChange.BallType
+@export var sparks:GPUParticles3D
+
 
 @export var spriteToGlow:Sprite3D
 
@@ -15,6 +17,8 @@ func _ready() -> void:
 
 func collidedWithPadel(padel:Padel) -> void:
 	velocity.y = -velocity.y
+	sparks.emitting = true
+	
 
 func collidedWithEdge(side:int) -> void:
 	velocity.x = -velocity.x
