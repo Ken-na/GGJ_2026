@@ -3,7 +3,6 @@
 [ext_resource type="PackedScene" uid="uid://ca0whf7l0j0d6" path="res://pong/pong_view_andrew.tscn" id="1_4u3hy"]
 [ext_resource type="Script" uid="uid://dvyltx743lx0t" path="res://combine/combineSceneManager.gd" id="1_wh044"]
 [ext_resource type="Resource" uid="uid://sonxmk0cgvbd" path="res://pong/resources/writingEncounters.tres" id="2_jovnt"]
-[ext_resource type="AudioStream" uid="uid://dv25d40t4h47q" path="res://Audio/Short Walking Placeholder.ogg" id="5_0kpad"]
 [ext_resource type="PackedScene" uid="uid://bjb3v37a2bxjf" path="res://story/story_viewAndrew.tscn" id="5_cjb3u"]
 
 [sub_resource type="Environment" id="Environment_jovnt"]
@@ -37,7 +36,3 @@ testSpawningScript = null
 [node name="StoryView" parent="." unique_id=1344410322 node_paths=PackedStringArray("sceneManager") instance=ExtResource("5_cjb3u")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.27393365, 4.973754, 0)
 sceneManager = NodePath("..")
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=453061279]
-stream = ExtResource("5_0kpad")
-playback_type = 1

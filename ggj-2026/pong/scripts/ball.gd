@@ -11,8 +11,6 @@ class_name Ball
 
 @export var spriteToGlow:Sprite3D
 
-const sfxBounce = preload("res://Audio/Mask SFX2.wav")
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	area.monitorable = true
