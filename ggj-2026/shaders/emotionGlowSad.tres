@@ -1,0 +1,9 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://difiu460pg3q0"]
+
+[ext_resource type="Shader" uid="uid://d1vk3yt5apiwx" path="res://shaders/emotionGlow.gdshader" id="1_m0np3"]
+[ext_resource type="Texture2D" uid="uid://d1hakpr0tu607" path="res://sprites/balls/Sadness-ball.png" id="2_m0np3"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_m0np3")
+shader_parameter/image = ExtResource("2_m0np3")

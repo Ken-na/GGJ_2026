@@ -36,6 +36,10 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	super._process(delta)
 	
+	leftSprite.modulate.a = alpha
+	middleSprite.modulate.a = alpha
+	rightSprite.modulate.a = alpha
+	
 	if !keyHeld:
 		changeDirOnFrequency(delta)
 		rotateDirDisplay()
