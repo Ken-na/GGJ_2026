@@ -24,7 +24,7 @@ func collidedWithEdge(side:int) -> void:
 	velocity.x = -velocity.x
 
 func addGlow():
-	spriteToGlow.visible = true
+	#spriteToGlow.material_overlay.set_shader_parameter("active", true)
 	pass
 
 func goneOffTop() -> void:

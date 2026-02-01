@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://blfr3q5b0duba"
-path.s3tc="res://.godot/imported/Paddle-Sad.png-c3a053767382d248779c54de4c995ba8.s3tc.ctex"
+uid="uid://btcx8ueogy1e0"
+path.s3tc="res://.godot/imported/Hallway_Balloons.png-963b9d446d857f6c6e7daf6040703a37.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "05625ec4cf451741e0982dba65e6a182"
+}
 
 [deps]
 
-source_file="res://sprites/paddle/Paddle-Sad.png"
-dest_files=["res://.godot/imported/Paddle-Sad.png-c3a053767382d248779c54de4c995ba8.s3tc.ctex"]
+source_file="res://story/3D_Assets/Out/Hallway_Balloons.png"
+dest_files=["res://.godot/imported/Hallway_Balloons.png-963b9d446d857f6c6e7daf6040703a37.s3tc.ctex"]
 
 [params]
 

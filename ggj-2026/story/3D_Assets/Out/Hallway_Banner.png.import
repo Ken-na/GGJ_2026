@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cgjn8qodimjnk"
-path.s3tc="res://.godot/imported/Degenerate-kid-Sprite.png-88d9fbf6a87a5f7b3e7f9bac17e76319.s3tc.ctex"
+uid="uid://ryjd7ok5fheb"
+path.s3tc="res://.godot/imported/Hallway_Banner.png-b6de8402d10df1587d66013c19db3059.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "b6a518805892dcaf7e02fff871454628"
+}
 
 [deps]
 
-source_file="res://sprites/characters/Degenerate-kid-Sprite.png"
-dest_files=["res://.godot/imported/Degenerate-kid-Sprite.png-88d9fbf6a87a5f7b3e7f9bac17e76319.s3tc.ctex"]
+source_file="res://story/3D_Assets/Out/Hallway_Banner.png"
+dest_files=["res://.godot/imported/Hallway_Banner.png-b6de8402d10df1587d66013c19db3059.s3tc.ctex"]
 
 [params]
 
