@@ -3,7 +3,8 @@ class_name SpawnRateChange
 
 enum BallType {
 	test,
-	sine
+	sine,
+	curve
 }
 
 @export var type:BallType

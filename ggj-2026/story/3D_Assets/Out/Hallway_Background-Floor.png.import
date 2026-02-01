@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d1hakpr0tu607"
-path.s3tc="res://.godot/imported/Sadness-ball.png-d3001f02d5df5954c5bbc533f1470b53.s3tc.ctex"
+uid="uid://dpkeibketng5r"
+path.s3tc="res://.godot/imported/Hallway_Background-Floor.png-e16bdeb95bc2b30ff62b91564116188d.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "1f123e79e07741041d5e107387b07ac1"
+}
 
 [deps]
 
-source_file="res://sprites/balls/Sadness-ball.png"
-dest_files=["res://.godot/imported/Sadness-ball.png-d3001f02d5df5954c5bbc533f1470b53.s3tc.ctex"]
+source_file="res://story/3D_Assets/Out/Hallway_Background-Floor.png"
+dest_files=["res://.godot/imported/Hallway_Background-Floor.png-e16bdeb95bc2b30ff62b91564116188d.s3tc.ctex"]
 
 [params]
 

@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d1hakpr0tu607"
-path.s3tc="res://.godot/imported/Sadness-ball.png-d3001f02d5df5954c5bbc533f1470b53.s3tc.ctex"
+uid="uid://b4rs3xi4h0x7t"
+path.s3tc="res://.godot/imported/Hallway_Locker-Texture-Side.png-c6907dc61cd1d3e30efe7a42fa686378.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "b0c6f7e33dc362d618aadca91befdb14"
+}
 
 [deps]
 
-source_file="res://sprites/balls/Sadness-ball.png"
-dest_files=["res://.godot/imported/Sadness-ball.png-d3001f02d5df5954c5bbc533f1470b53.s3tc.ctex"]
+source_file="res://story/3D_Assets/Out/Hallway_Locker-Texture-Side.png"
+dest_files=["res://.godot/imported/Hallway_Locker-Texture-Side.png-c6907dc61cd1d3e30efe7a42fa686378.s3tc.ctex"]
 
 [params]
 

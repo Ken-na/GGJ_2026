@@ -5,6 +5,11 @@
 [ext_resource type="Resource" uid="uid://sonxmk0cgvbd" path="res://pong/resources/writingEncounters.tres" id="2_jovnt"]
 [ext_resource type="PackedScene" uid="uid://bjb3v37a2bxjf" path="res://story/story_viewAndrew.tscn" id="5_cjb3u"]
 
+[sub_resource type="Environment" id="Environment_jovnt"]
+background_mode = 1
+ambient_light_source = 2
+ambient_light_color = Color(0.49019608, 0.49019608, 0.49019608, 1)
+
 [node name="BigScene" type="Node3D" unique_id=703525007 node_paths=PackedStringArray("cam", "storyView", "pongView")]
 script = ExtResource("1_wh044")
 cam = NodePath("Camera3D")
@@ -18,6 +23,9 @@ cameraRotationStory = -0.42
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=781766782]
 transform = Transform3D(1, 0, 0, 0, 0.9135454, 0.40673664, 0, -0.40673664, 0.9135454, 0, -4.2335873, 12)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Camera3D" unique_id=1593695625]
+environment = SubResource("Environment_jovnt")
 
 [node name="PongView" parent="." unique_id=2027028987 instance=ExtResource("1_4u3hy")]
 transform = Transform3D(1, 0, 0, 0, 0.81915206, -0.57357645, 0, 0.57357645, 0.81915206, 0, 4.3357677, -12.392563)
