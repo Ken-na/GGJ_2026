@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://q7dvuw4e4u6j"
-path.s3tc="res://.godot/imported/Game-Background.png-07254ce8bff04132af856f3fbcad3aab.s3tc.ctex"
+uid="uid://baxq7y8pq70ft"
+path.s3tc="res://.godot/imported/Player-Idle.png-f1f8f4d71c2c8e03778674b72c762e79.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://sprites/Game-Background.png"
-dest_files=["res://.godot/imported/Game-Background.png-07254ce8bff04132af856f3fbcad3aab.s3tc.ctex"]
+source_file="res://sprites/characters/Animated/Player-Idle.png"
+dest_files=["res://.godot/imported/Player-Idle.png-f1f8f4d71c2c8e03778674b72c762e79.s3tc.ctex"]
 
 [params]
 

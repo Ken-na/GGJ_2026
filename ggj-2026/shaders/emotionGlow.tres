@@ -1,9 +1,10 @@
 [gd_resource type="ShaderMaterial" format=3 uid="uid://cqf4v2f44dvds"]
 
 [ext_resource type="Shader" uid="uid://d1vk3yt5apiwx" path="res://shaders/emotionGlow.gdshader" id="1_xuovp"]
-[ext_resource type="Texture2D" uid="uid://bkke6qyydt4py" path="res://sprites/balls/Starstruck-ball.png" id="2_6shrs"]
+[ext_resource type="Texture2D" uid="uid://dtqo2jbevudeg" path="res://sprites/balls/Default-ball.png" id="2_6shrs"]
 
 [resource]
-render_priority = 0
+render_priority = -1
 shader = ExtResource("1_xuovp")
+shader_parameter/active = false
 shader_parameter/image = ExtResource("2_6shrs")

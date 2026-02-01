@@ -24,7 +24,6 @@ material = SubResource("StandardMaterial3D_2bpn0")
 emitting = false
 one_shot = true
 explosiveness = 1.0
-local_coords = true
 trail_lifetime = 2.0
 process_material = SubResource("ParticleProcessMaterial_to5l4")
 draw_pass_1 = SubResource("QuadMesh_mpeg1")

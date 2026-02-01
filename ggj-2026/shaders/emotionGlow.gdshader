@@ -4,6 +4,7 @@ void vertex() {
 	// Called for every vertex the material is visible on.
 }
 
+uniform bool active;
 uniform sampler2D image : source_color;
 void fragment() {
 	vec2 texSize = vec2(textureSize(image, 0));
@@ -24,4 +25,9 @@ void fragment() {
 	float alpha = float(pixelsFilled)/20.0f;
 	ALBEDO = vec3(1, 1, 0);
 	ALPHA = alpha;
+	
+	if (!active)
+	{
+		ALPHA = 0.0f;
+	}
 }
