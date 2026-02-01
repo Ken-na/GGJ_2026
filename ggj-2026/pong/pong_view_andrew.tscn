@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dx0kqem4bxo8u" path="res://pong/scripts/pongView.gd" id="1_8vvw0"]
 [ext_resource type="Resource" uid="uid://c5ganr7xdqp78" path="res://pong/resources/testSpawning.tres" id="2_00rvn"]
-[ext_resource type="Texture2D" uid="uid://30i3pwb7nukc" path="res://sprites/fill.png" id="3_k5qf5"]
+[ext_resource type="Texture2D" uid="uid://c7htdm84cfptt" path="res://pong/Game-Background.png" id="3_o5kj1"]
 [ext_resource type="Script" uid="uid://cq24k5lsfcs3o" path="res://pong/scripts/ballSpawner.gd" id="4_8vvw0"]
 [ext_resource type="PackedScene" uid="uid://dvhci7hwd2imw" path="res://pong/padels/padelLeftRight.tscn" id="4_tcaqb"]
 [ext_resource type="PackedScene" uid="uid://cajutpunyk7rj" path="res://pong/padels/padelSee.tscn" id="5_ou6pn"]
@@ -28,8 +28,9 @@ botCollidor = NodePath("botCollidor")
 
 [node name="background" type="Sprite3D" parent="." unique_id=1590205801]
 sorting_offset = -10.0
-pixel_size = 0.5
-texture = ExtResource("3_k5qf5")
+pixel_size = 0.021
+texture_filter = 0
+texture = ExtResource("3_o5kj1")
 
 [node name="padelLeftRight" parent="." unique_id=795246886 instance=ExtResource("4_tcaqb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2059276, 0)

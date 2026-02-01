@@ -1,0 +1,336 @@
+[gd_resource type="Resource" script_class="WritingScript" format=3 uid="uid://citlqcsmcrkgj"]
+
+[ext_resource type="Script" uid="uid://dhdg27nsrhi2v" path="res://pong/scripts/resources/writingScript.gd" id="1_vpmmc"]
+[ext_resource type="Script" uid="uid://bwiyk0soex6va" path="res://pong/scripts/resources/writingLineChange.gd" id="2_8dkea"]
+[ext_resource type="Script" uid="uid://6iyv47nkdjxy" path="res://pong/scripts/resources/writingLine.gd" id="3_8dkea"]
+[ext_resource type="Script" uid="uid://838ma1k4qbj2" path="res://pong/scripts/resources/level.gd" id="4_4n1nk"]
+[ext_resource type="Script" uid="uid://beubkdyl0iuls" path="res://pong/scripts/resources/spawningScript.gd" id="4_ud61o"]
+[ext_resource type="Script" uid="uid://b4tjphbpqkoio" path="res://pong/scripts/resources/spawnRateChange.gd" id="5_vkplk"]
+
+[sub_resource type="Resource" id="Resource_a8blk"]
+script = ExtResource("5_vkplk")
+time = 20.0
+newRate = 0.8
+metadata/_custom_type_script = "uid://b4tjphbpqkoio"
+
+[sub_resource type="Resource" id="Resource_ei4ta"]
+script = ExtResource("5_vkplk")
+type = 1
+time = 20.0
+newRate = 0.2
+metadata/_custom_type_script = "uid://b4tjphbpqkoio"
+
+[sub_resource type="Resource" id="Resource_ggq8v"]
+script = ExtResource("5_vkplk")
+type = 1
+time = 35.0
+newRate = 0.5
+metadata/_custom_type_script = "uid://b4tjphbpqkoio"
+
+[sub_resource type="Resource" id="Resource_xxq1d"]
+script = ExtResource("4_ud61o")
+startingSpawnValues = Dictionary[int, float]({
+0: 0.4,
+1: 0.0
+})
+spawnRateChanges = Array[ExtResource("5_vkplk")]([SubResource("Resource_a8blk"), SubResource("Resource_ei4ta"), SubResource("Resource_ggq8v")])
+metadata/_custom_type_script = "uid://beubkdyl0iuls"
+
+[sub_resource type="Resource" id="Resource_pcux3"]
+script = ExtResource("4_4n1nk")
+spawnScript = SubResource("Resource_xxq1d")
+metadata/_custom_type_script = "uid://838ma1k4qbj2"
+
+[sub_resource type="Resource" id="Resource_4n1nk"]
+script = ExtResource("3_8dkea")
+duration = 20.0
+scriptLine = "Hey Kid. You believe in second chances, right?"
+metadata/_custom_type_script = "uid://6iyv47nkdjxy"
+
+[sub_resource type="Resource" id="Resource_1eig1"]
+script = ExtResource("3_8dkea")
+duration = 15.0
+scriptLine = " I can change for her. I'm sure of it!"
+metadata/_custom_type_script = "uid://6iyv47nkdjxy"
+
+[sub_resource type="Resource" id="Resource_ud61o"]
+script = ExtResource("3_8dkea")
+duration = 15.0
+scriptLine = "All relationships have their speed bumps..."
+metadata/_custom_type_script = "uid://6iyv47nkdjxy"
+
+[sub_resource type="Resource" id="Resource_vkplk"]
+script = ExtResource("2_8dkea")
+scriptTitle = "bus"
+level = SubResource("Resource_pcux3")
+scriptLines = Array[ExtResource("3_8dkea")]([SubResource("Resource_4n1nk"), SubResource("Resource_1eig1"), SubResource("Resource_ud61o")])
+metadata/_custom_type_script = "uid://bwiyk0soex6va"
+
+[sub_resource type="Resource" id="Resource_2qvah"]
+script = ExtResource("5_vkplk")
+time = 20.0
+newRate = 0.1
+metadata/_custom_type_script = "uid://b4tjphbpqkoio"
+
+[sub_resource type="Resource" id="Resource_1xyc0"]
+script = ExtResource("5_vkplk")
+type = 1
+time = 30.0
+newRate = 0.8
+metadata/_custom_type_script = "uid://b4tjphbpqkoio"
+
+[sub_resource type="Resource" id="Resource_yel82"]
+script = ExtResource("5_vkplk")
+type = 1
+time = 45.0
+metadata/_custom_type_script = "uid://b4tjphbpqkoio"
+
+[sub_resource type="Resource" id="Resource_jirp2"]
+script = ExtResource("5_vkplk")
+time = 45.0
+newRate = 0.4
+metadata/_custom_type_script = "uid://b4tjphbpqkoio"
+
+[sub_resource type="Resource" id="Resource_cc6ux"]
+script = ExtResource("5_vkplk")
+type = 2
+time = 45.0
+newRate = 0.4
+metadata/_custom_type_script = "uid://b4tjphbpqkoio"
+
+[sub_resource type="Resource" id="Resource_6sp0n"]
+script = ExtResource("4_ud61o")
+startingSpawnValues = Dictionary[int, float]({
+0: 0.0,
+1: 0.5,
+2: 0.0
+})
+spawnRateChanges = Array[ExtResource("5_vkplk")]([SubResource("Resource_2qvah"), SubResource("Resource_1xyc0"), SubResource("Resource_yel82"), SubResource("Resource_jirp2"), SubResource("Resource_cc6ux")])
+metadata/_custom_type_script = "uid://beubkdyl0iuls"
+
+[sub_resource type="Resource" id="Resource_rsg0o"]
+script = ExtResource("4_4n1nk")
+spawnScript = SubResource("Resource_6sp0n")
+anyPositiveBalls = true
+metadata/_custom_type_script = "uid://838ma1k4qbj2"
+
+[sub_resource type="Resource" id="Resource_i8htk"]
+script = ExtResource("3_8dkea")
+duration = 20.0
+scriptLine = "Hi! W-want to be friends? I pay premium hourly rates!"
+metadata/_custom_type_script = "uid://6iyv47nkdjxy"
+
+[sub_resource type="Resource" id="Resource_v31gy"]
+script = ExtResource("3_8dkea")
+duration = 15.0
+scriptLine = "Any exposure you can get is good exposure. This is the same thing, right?"
+metadata/_custom_type_script = "uid://6iyv47nkdjxy"
+
+[sub_resource type="Resource" id="Resource_3fou1"]
+script = ExtResource("3_8dkea")
+duration = 15.0
+scriptLine = "If someone richer than me moves here, will I have anything still going for me? Maybe I should consider reinventing myself..."
+metadata/_custom_type_script = "uid://6iyv47nkdjxy"
+
+[sub_resource type="Resource" id="Resource_5fku2"]
+script = ExtResource("2_8dkea")
+scriptTitle = "kid"
+level = SubResource("Resource_rsg0o")
+scriptLines = Array[ExtResource("3_8dkea")]([SubResource("Resource_i8htk"), SubResource("Resource_v31gy"), SubResource("Resource_3fou1")])
+metadata/_custom_type_script = "uid://bwiyk0soex6va"
+
+[sub_resource type="Resource" id="Resource_yd73u"]
+script = ExtResource("5_vkplk")
+type = 1
+time = 20.0
+metadata/_custom_type_script = "uid://b4tjphbpqkoio"
+
+[sub_resource type="Resource" id="Resource_relfn"]
+script = ExtResource("5_vkplk")
+type = 2
+time = 20.0
+newRate = 0.6
+metadata/_custom_type_script = "uid://b4tjphbpqkoio"
+
+[sub_resource type="Resource" id="Resource_shqqq"]
+script = ExtResource("5_vkplk")
+type = 2
+time = 35.0
+metadata/_custom_type_script = "uid://b4tjphbpqkoio"
+
+[sub_resource type="Resource" id="Resource_0axok"]
+script = ExtResource("5_vkplk")
+time = 35.0
+newRate = 0.6
+metadata/_custom_type_script = "uid://b4tjphbpqkoio"
+
+[sub_resource type="Resource" id="Resource_68lly"]
+script = ExtResource("5_vkplk")
+type = 1
+time = 35.0
+newRate = 0.6
+metadata/_custom_type_script = "uid://b4tjphbpqkoio"
+
+[sub_resource type="Resource" id="Resource_1ea3s"]
+script = ExtResource("5_vkplk")
+time = 50.0
+metadata/_custom_type_script = "uid://b4tjphbpqkoio"
+
+[sub_resource type="Resource" id="Resource_nxwvt"]
+script = ExtResource("5_vkplk")
+type = 1
+time = 50.0
+newRate = 1.2
+metadata/_custom_type_script = "uid://b4tjphbpqkoio"
+
+[sub_resource type="Resource" id="Resource_lbcq8"]
+script = ExtResource("4_ud61o")
+startingSpawnValues = Dictionary[int, float]({
+0: 0.0,
+1: 0.6,
+2: 0.0
+})
+spawnRateChanges = Array[ExtResource("5_vkplk")]([SubResource("Resource_yd73u"), SubResource("Resource_relfn"), SubResource("Resource_shqqq"), SubResource("Resource_0axok"), SubResource("Resource_68lly"), SubResource("Resource_1ea3s"), SubResource("Resource_nxwvt")])
+metadata/_custom_type_script = "uid://beubkdyl0iuls"
+
+[sub_resource type="Resource" id="Resource_ofx7t"]
+script = ExtResource("4_4n1nk")
+spawnScript = SubResource("Resource_lbcq8")
+positiveBallType = 1
+anyPositiveBalls = true
+metadata/_custom_type_script = "uid://838ma1k4qbj2"
+
+[sub_resource type="Resource" id="Resource_8l3ik"]
+script = ExtResource("3_8dkea")
+duration = 20.0
+scriptLine = "I'm a transfer student. I'm surprised how tight-knit the community is here!"
+metadata/_custom_type_script = "uid://6iyv47nkdjxy"
+
+[sub_resource type="Resource" id="Resource_46sp8"]
+script = ExtResource("3_8dkea")
+duration = 15.0
+scriptLine = "No. Good grades are all I need. Well, that's what my parents taught me."
+metadata/_custom_type_script = "uid://6iyv47nkdjxy"
+
+[sub_resource type="Resource" id="Resource_k1cfg"]
+script = ExtResource("3_8dkea")
+duration = 15.0
+scriptLine = "I want to go to Jack's party, but is it really worth skipping study for tomorrow's test?"
+metadata/_custom_type_script = "uid://6iyv47nkdjxy"
+
+[sub_resource type="Resource" id="Resource_cwgle"]
+script = ExtResource("3_8dkea")
+duration = 15.0
+scriptLine = "Forget straight A's! The friends you make along the way are what's really important."
+metadata/_custom_type_script = "uid://6iyv47nkdjxy"
+
+[sub_resource type="Resource" id="Resource_g0pfp"]
+script = ExtResource("2_8dkea")
+scriptTitle = "exchange"
+level = SubResource("Resource_ofx7t")
+scriptLines = Array[ExtResource("3_8dkea")]([SubResource("Resource_8l3ik"), SubResource("Resource_46sp8"), SubResource("Resource_k1cfg"), SubResource("Resource_cwgle")])
+metadata/_custom_type_script = "uid://bwiyk0soex6va"
+
+[sub_resource type="Resource" id="Resource_sy8rb"]
+script = ExtResource("5_vkplk")
+type = 1
+time = 20.0
+newRate = 0.8
+metadata/_custom_type_script = "uid://b4tjphbpqkoio"
+
+[sub_resource type="Resource" id="Resource_pduxv"]
+script = ExtResource("5_vkplk")
+type = 1
+time = 35.0
+newRate = 1.2
+metadata/_custom_type_script = "uid://b4tjphbpqkoio"
+
+[sub_resource type="Resource" id="Resource_sumbn"]
+script = ExtResource("5_vkplk")
+type = 1
+time = 50.0
+newRate = 1.5
+metadata/_custom_type_script = "uid://b4tjphbpqkoio"
+
+[sub_resource type="Resource" id="Resource_3pc8p"]
+script = ExtResource("5_vkplk")
+time = 50.0
+newRate = 1.0
+metadata/_custom_type_script = "uid://b4tjphbpqkoio"
+
+[sub_resource type="Resource" id="Resource_ewokn"]
+script = ExtResource("5_vkplk")
+time = 75.0
+metadata/_custom_type_script = "uid://b4tjphbpqkoio"
+
+[sub_resource type="Resource" id="Resource_yvrat"]
+script = ExtResource("5_vkplk")
+type = 1
+time = 75.0
+metadata/_custom_type_script = "uid://b4tjphbpqkoio"
+
+[sub_resource type="Resource" id="Resource_65shg"]
+script = ExtResource("5_vkplk")
+type = 2
+time = 75.0
+newRate = 1.0
+metadata/_custom_type_script = "uid://b4tjphbpqkoio"
+
+[sub_resource type="Resource" id="Resource_o811h"]
+script = ExtResource("4_ud61o")
+startingSpawnValues = Dictionary[int, float]({
+0: 0.1,
+1: 0.5,
+2: 0.1
+})
+spawnRateChanges = Array[ExtResource("5_vkplk")]([SubResource("Resource_sy8rb"), SubResource("Resource_pduxv"), SubResource("Resource_sumbn"), SubResource("Resource_3pc8p"), SubResource("Resource_ewokn"), SubResource("Resource_yvrat"), SubResource("Resource_65shg")])
+metadata/_custom_type_script = "uid://beubkdyl0iuls"
+
+[sub_resource type="Resource" id="Resource_gdlpe"]
+script = ExtResource("4_4n1nk")
+spawnScript = SubResource("Resource_o811h")
+positiveBallType = 2
+anyPositiveBalls = true
+metadata/_custom_type_script = "uid://838ma1k4qbj2"
+
+[sub_resource type="Resource" id="Resource_jyle7"]
+script = ExtResource("3_8dkea")
+duration = 20.0
+scriptLine = "Check out my stick-and-poke tattoo! Cool, right?"
+metadata/_custom_type_script = "uid://6iyv47nkdjxy"
+
+[sub_resource type="Resource" id="Resource_sgdto"]
+script = ExtResource("3_8dkea")
+duration = 15.0
+scriptLine = "Of course I'm gonna try these pills. Everyone does it at least once!"
+metadata/_custom_type_script = "uid://6iyv47nkdjxy"
+
+[sub_resource type="Resource" id="Resource_itdix"]
+script = ExtResource("3_8dkea")
+duration = 15.0
+scriptLine = "I'm gonna ride my bike off the roof this arvo. Wanna watch?"
+metadata/_custom_type_script = "uid://6iyv47nkdjxy"
+
+[sub_resource type="Resource" id="Resource_n3vtj"]
+script = ExtResource("3_8dkea")
+duration = 15.0
+scriptLine = "Should I actually watch a bike rally before doing one myself?"
+metadata/_custom_type_script = "uid://6iyv47nkdjxy"
+
+[sub_resource type="Resource" id="Resource_g6m1a"]
+script = ExtResource("3_8dkea")
+duration = 15.0
+scriptLine = "I've, um, never hung out at someone else's place. Do you think I could...?"
+metadata/_custom_type_script = "uid://6iyv47nkdjxy"
+
+[sub_resource type="Resource" id="Resource_ypcpk"]
+script = ExtResource("2_8dkea")
+scriptTitle = "junkie"
+level = SubResource("Resource_gdlpe")
+scriptLines = Array[ExtResource("3_8dkea")]([SubResource("Resource_jyle7"), SubResource("Resource_sgdto"), SubResource("Resource_itdix"), SubResource("Resource_n3vtj"), SubResource("Resource_g6m1a")])
+metadata/_custom_type_script = "uid://bwiyk0soex6va"
+
+[resource]
+script = ExtResource("1_vpmmc")
+writingLineChanges = Array[ExtResource("2_8dkea")]([SubResource("Resource_vkplk"), SubResource("Resource_5fku2"), SubResource("Resource_g0pfp"), SubResource("Resource_ypcpk")])
+metadata/_custom_type_script = "uid://dhdg27nsrhi2v"

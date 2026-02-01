@@ -4,7 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://bkke6qyydt4py" path="res://sprites/balls/Starstruck-ball.png" id="2_b4rxb"]
 
 [resource]
-render_priority = -1
+render_priority = 0
 shader = ExtResource("1_ba3u2")
-shader_parameter/active = false
 shader_parameter/image = ExtResource("2_b4rxb")
