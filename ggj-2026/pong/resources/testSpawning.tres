@@ -5,14 +5,15 @@
 
 [sub_resource type="Resource" id="Resource_e405w"]
 script = ExtResource("2_tm7b2")
-time = 10.0
-newRate = 10.0
+time = 5.0
+newRate = 5.0
 metadata/_custom_type_script = "uid://b4tjphbpqkoio"
 
 [resource]
 script = ExtResource("1_e405w")
 startingSpawnValues = Dictionary[int, float]({
-0: 1.0
+0: 0.0,
+1: 1.0
 })
 spawnRateChanges = Array[ExtResource("2_tm7b2")]([SubResource("Resource_e405w")])
 metadata/_custom_type_script = "uid://beubkdyl0iuls"
