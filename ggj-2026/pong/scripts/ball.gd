@@ -5,6 +5,7 @@ class_name Ball
 @export var velocity:Vector2 = Vector2(0, 0)
 @export var verticalSpeed:float = 1.0
 @export var horizontalSpeed:float = 1.0
+@export var ballTypeID:SpawnRateChange.BallType
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -13,7 +14,16 @@ func _ready() -> void:
 func collidedWithPadel(padel:Padel) -> void:
 	velocity.y = -velocity.y
 
-func position(bounds:Vector4) -> Vector2:
+func collidedWithEdge(side:int) -> void:
+	velocity.x = -velocity.x
+	
+func goneOffTop() -> void:
+	queue_free()
+	
+func goneOffBottom() -> void:
+	queue_free()
+
+func initialPosition(bounds:Vector4) -> Vector2:
 	var randPos:Vector2 = Vector2(	bounds.x + randf()*(bounds.z - bounds.x),
 									bounds.y + randf()*(bounds.w - bounds.y))
 	transform.origin.x = randPos.x

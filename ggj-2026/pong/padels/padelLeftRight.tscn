@@ -1,16 +1,40 @@
-[gd_scene format=3 uid="uid://bexwrqlgg1mu"]
+[gd_scene format=3 uid="uid://dvhci7hwd2imw"]
 
 [ext_resource type="Script" uid="uid://d3af3srauotrd" path="res://pong/scripts/padelLeftRight.gd" id="1_0y1ew"]
-[ext_resource type="Texture2D" uid="uid://bjabuilwucqtn" path="res://icon.svg" id="2_mhob2"]
+[ext_resource type="Texture2D" uid="uid://dpgl3d63up502" path="res://sprites/keys/spacebar.png" id="2_8gf2f"]
+[ext_resource type="Texture2D" uid="uid://dujj7h4fsj5e6" path="res://sprites/paddle/paddle-end-16x16.png" id="2_maj62"]
 [ext_resource type="Shape3D" uid="uid://bqkxtsnd3kqqp" path="res://pong/padels/base.tres" id="3_2q311"]
+[ext_resource type="Texture2D" uid="uid://bfbwi3bxnca6s" path="res://sprites/paddle/paddle-mid-16x16.png" id="3_8gf2f"]
 
-[node name="padel" type="Node3D" unique_id=795246886 node_paths=PackedStringArray("area")]
+[node name="padel" type="Node3D" unique_id=795246886 node_paths=PackedStringArray("leftSprite", "middleSprite", "rightSprite", "iconSprite", "area")]
 script = ExtResource("1_0y1ew")
+leftSprite = NodePath("Left")
+middleSprite = NodePath("Middle")
+rightSprite = NodePath("Right")
+iconSprite = NodePath("SpaceIcon")
 area = NodePath("Area3D")
+moveSpeed = null
 
-[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1761826639]
-transform = Transform3D(3, 0, 0, 0, 0.2, 0, 0, 0, 0.5, 0, 0, 0)
-texture = ExtResource("2_mhob2")
+[node name="SpaceIcon" type="Sprite3D" parent="." unique_id=1277109727]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 1.187105, 0)
+texture_filter = 0
+texture = ExtResource("2_8gf2f")
+
+[node name="Left" type="Sprite3D" parent="." unique_id=814584427]
+pixel_size = 0.0625
+texture_filter = 0
+texture = ExtResource("2_maj62")
+
+[node name="Middle" type="Sprite3D" parent="." unique_id=1761826639]
+pixel_size = 0.0625
+texture_filter = 0
+texture = ExtResource("3_8gf2f")
+
+[node name="Right" type="Sprite3D" parent="." unique_id=449525947]
+flip_h = true
+pixel_size = 0.0625
+texture_filter = 0
+texture = ExtResource("2_maj62")
 
 [node name="Area3D" type="Area3D" parent="." unique_id=299177442]
 

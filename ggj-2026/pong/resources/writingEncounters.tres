@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="WritingScript" format=3 uid="uid://sonxmk0cgvbd"]
+
+[ext_resource type="Script" uid="uid://dhdg27nsrhi2v" path="res://pong/scripts/resources/writingScript.gd" id="1_weh2r"]
+[ext_resource type="Script" uid="uid://bwiyk0soex6va" path="res://pong/scripts/resources/writingLineChange.gd" id="2_air5t"]
+[ext_resource type="Script" uid="uid://6iyv47nkdjxy" path="res://pong/scripts/resources/writingLine.gd" id="3_air5t"]
+[ext_resource type="Resource" uid="uid://bcichcgr7d8dp" path="res://levels/test.tres" id="3_ykrqt"]
+
+[sub_resource type="Resource" id="Resource_ykrqt"]
+script = ExtResource("3_air5t")
+duration = 20.0
+scriptLine = "I can change for her. I'm sure of it!"
+
+[sub_resource type="Resource" id="Resource_i34uy"]
+script = ExtResource("3_air5t")
+type = 1
+duration = 15.0
+scriptLine = "All relationships have their speed bumps."
+
+[sub_resource type="Resource" id="Resource_2wy1d"]
+script = ExtResource("3_air5t")
+duration = 15.0
+scriptLine = "Deep down, I'm sure her and I were meant to be together."
+
+[sub_resource type="Resource" id="Resource_achy1"]
+script = ExtResource("2_air5t")
+scriptTitle = "First Encounter"
+level = ExtResource("3_ykrqt")
+scriptLines = Array[ExtResource("3_air5t")]([SubResource("Resource_ykrqt"), SubResource("Resource_i34uy"), SubResource("Resource_2wy1d")])
+
+[resource]
+script = ExtResource("1_weh2r")
+writingLineChanges = Array[ExtResource("2_air5t")]([SubResource("Resource_achy1")])
+metadata/_custom_type_script = "uid://beubkdyl0iuls"
