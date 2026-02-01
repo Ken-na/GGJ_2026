@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dtqo2jbevudeg" path="res://sprites/balls/Default-ball.png" id="2_6shrs"]
 
 [resource]
-render_priority = 0
+render_priority = -1
 shader = ExtResource("1_xuovp")
+shader_parameter/active = false
 shader_parameter/image = ExtResource("2_6shrs")

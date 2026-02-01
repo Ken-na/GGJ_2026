@@ -3,32 +3,24 @@
 [ext_resource type="Script" uid="uid://did22qhoim86v" path="res://pong/ball/sineBall.gd" id="1_kqxfq"]
 [ext_resource type="Material" uid="uid://47e23queakg4" path="res://shaders/emotionGlowStar.tres" id="2_1t3q5"]
 [ext_resource type="Shape3D" uid="uid://brunftramid2h" path="res://pong/ballShape.tres" id="3_hp74g"]
-[ext_resource type="Texture2D" uid="uid://bpgwdbv7faodc" path="res://pong/ball/spark.tres" id="3_tbnje"]
-[ext_resource type="PackedScene" uid="uid://sujrdyaw0e0c" path="res://pong/ballSpark.tscn" id="4_u8uss"]
+[ext_resource type="Texture2D" path="res://pong/ball/spark.tres" id="3_tbnje"]
+[ext_resource type="PackedScene" path="res://pong/ballSpark.tscn" id="4_u8uss"]
 
 [node name="ball" type="Node3D" unique_id=707752679 node_paths=PackedStringArray("area", "sparks", "spriteToGlow")]
 script = ExtResource("1_kqxfq")
 area = NodePath("Area3D")
 ballTypeID = 1
 sparks = NodePath("Sprite3D/GPUParticles3D")
-spriteToGlow = NodePath("glow")
+spriteToGlow = NodePath("Sprite3D")
 
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=1922072098]
-sorting_offset = 9.0
+sorting_offset = 8.0
+material_overlay = ExtResource("2_1t3q5")
 pixel_size = 0.0625
 texture_filter = 0
 texture = ExtResource("3_tbnje")
 
 [node name="GPUParticles3D" parent="Sprite3D" unique_id=318749315 instance=ExtResource("4_u8uss")]
-local_coords = true
-
-[node name="glow" type="Sprite3D" parent="." unique_id=470208242]
-visible = false
-sorting_offset = 8.0
-material_override = ExtResource("2_1t3q5")
-pixel_size = 0.0625
-texture_filter = 0
-texture = ExtResource("3_tbnje")
 
 [node name="Area3D" type="Area3D" parent="." unique_id=40941805]
 

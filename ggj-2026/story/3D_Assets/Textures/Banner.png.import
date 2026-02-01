@@ -2,21 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://blfr3q5b0duba"
-path.s3tc="res://.godot/imported/Paddle-Sad.png-c3a053767382d248779c54de4c995ba8.s3tc.ctex"
+uid="uid://dndgf5wboicay"
+path="res://.godot/imported/Banner.png-d2a50db58e3482638404885533e5ea3c.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/paddle/Paddle-Sad.png"
-dest_files=["res://.godot/imported/Paddle-Sad.png-c3a053767382d248779c54de4c995ba8.s3tc.ctex"]
+source_file="res://story/3D_Assets/Textures/Banner.png"
+dest_files=["res://.godot/imported/Banner.png-d2a50db58e3482638404885533e5ea3c.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -24,7 +23,7 @@ compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
@@ -38,4 +37,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1
