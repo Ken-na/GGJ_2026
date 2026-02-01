@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cgnk0qm4paxob"]
 
-[ext_resource type="Script" path="res://pong/scripts/padelBouncer.gd" id="1_fguk3"]
+[ext_resource type="Script" uid="uid://cnmgurisr4eid" path="res://pong/scripts/padelBouncer.gd" id="1_fguk3"]
 [ext_resource type="Shape3D" uid="uid://bqkxtsnd3kqqp" path="res://pong/padels/base.tres" id="2_fynd7"]
 [ext_resource type="Texture2D" uid="uid://dujj7h4fsj5e6" path="res://sprites/paddle/paddle-end-16x16.png" id="4_hhv62"]
 [ext_resource type="Texture2D" uid="uid://d3r81i6cquqdd" path="res://sprites/keys/H.png" id="5_fguk3"]
