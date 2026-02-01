@@ -97,6 +97,7 @@ metadata/_custom_type_script = "uid://6iyv47nkdjxy"
 
 [sub_resource type="Resource" id="Resource_3omql"]
 script = ExtResource("2_air5t")
+scriptTitle = "Third Encounter"
 level = SubResource("Resource_2tiwx")
 scriptLines = Array[ExtResource("3_air5t")]([SubResource("Resource_3er7j"), SubResource("Resource_7g1m3"), SubResource("Resource_g1eth"), SubResource("Resource_nrdi7")])
 metadata/_custom_type_script = "uid://bwiyk0soex6va"
@@ -127,6 +128,7 @@ metadata/_custom_type_script = "uid://6iyv47nkdjxy"
 
 [sub_resource type="Resource" id="Resource_bp11r"]
 script = ExtResource("2_air5t")
+scriptTitle = "Fourth Encounter"
 level = SubResource("Resource_fxyie")
 scriptLines = Array[ExtResource("3_air5t")]([SubResource("Resource_cyiik"), SubResource("Resource_ta5dl"), SubResource("Resource_6cmal"), SubResource("Resource_355b5")])
 metadata/_custom_type_script = "uid://bwiyk0soex6va"
@@ -162,6 +164,7 @@ metadata/_custom_type_script = "uid://6iyv47nkdjxy"
 
 [sub_resource type="Resource" id="Resource_y44jp"]
 script = ExtResource("2_air5t")
+scriptTitle = "Last Encounter"
 level = SubResource("Resource_m48d7")
 scriptLines = Array[ExtResource("3_air5t")]([SubResource("Resource_5eaq3"), SubResource("Resource_mmgnk"), SubResource("Resource_fixeu"), SubResource("Resource_nuce1"), SubResource("Resource_f0hsf")])
 metadata/_custom_type_script = "uid://bwiyk0soex6va"

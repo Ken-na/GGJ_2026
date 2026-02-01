@@ -28,4 +28,5 @@ metadata/_custom_type_script = "uid://beubkdyl0iuls"
 [resource]
 script = ExtResource("1_x3cmq")
 spawnScript = SubResource("Resource_ehneq")
+anyPositiveBalls = true
 metadata/_custom_type_script = "uid://838ma1k4qbj2"
