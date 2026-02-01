@@ -47,11 +47,15 @@ func moveCameraToPong():
  
 func resumeStory():
 	Audio_Player.play_music_level()
+	#currentScriptIndex = clamp(currentScriptIndex + 1, 0, fullScript.writingLineChanges.size() - 1)
+	currentScriptIndex = currentScriptIndex + 1
+	
 	await get_tree().create_timer(.5).timeout
 	pongView.setRunning(false)
 	
 	#wait then move
 	await moveCameraToStory()
+	
 	storyView.nextScene()
 	
 func moveCameraToStory():
@@ -65,6 +69,9 @@ func moveCameraToStory():
 	
 func finishedStoryWalking():
 	
+	if currentScriptIndex >= fullScript.writingLineChanges.size():
+		print("THIS IS ENDED")
+		return #THIS IS THE END?
 	#storyView.showText(fullScript.writingLineChanges[currentScriptIndex].scriptLines[currentScriptLineIndex])
 	
 	#WAIT FOR CLICK??

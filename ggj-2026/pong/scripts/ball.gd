@@ -6,6 +6,10 @@ class_name Ball
 @export var verticalSpeed:float = 1.0
 @export var horizontalSpeed:float = 1.0
 @export var ballTypeID:SpawnRateChange.BallType
+@export var sparks:GPUParticles3D
+
+
+@export var spriteToGlow:Sprite3D
 
 const sfxBounce = preload("res://Audio/Mask SFX2.wav")
 
@@ -15,10 +19,16 @@ func _ready() -> void:
 
 func collidedWithPadel(padel:Padel) -> void:
 	velocity.y = -velocity.y
+	sparks.emitting = true
+	
 
 func collidedWithEdge(side:int) -> void:
 	velocity.x = -velocity.x
-	
+
+func addGlow():
+	spriteToGlow.visible = true
+	pass
+
 func goneOffTop() -> void:
 	queue_free()
 	

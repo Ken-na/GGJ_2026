@@ -15,14 +15,16 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if isFollowingCurve:
-		getMoveAlongCurve()
-	else:
-		super._process(delta)
-	pass
+	if falling:
+		velocity.y = max(velocity.y - delta, -5)
+	
+	super._process(delta)
 
+var falling = false
 func collidedWithPadel(padel:Padel) -> void:
-	rollNewCurve(padel)
+	sparks.emitting = true
+	velocity.y = 5
+	falling = true
 
 #probably needs to prioritize moving away from object, but test fo now
 func rollNewCurve(padel:Padel):
@@ -48,6 +50,8 @@ func rollNewCurve(padel:Padel):
 	isFollowingCurve = true
 	curMoveDist = 0
 	curveMoveSpeed = velocity.length()
+	
+	sparks.emitting = false
 
 func getMoveAlongCurve():
 	var delta: float = get_process_delta_time()

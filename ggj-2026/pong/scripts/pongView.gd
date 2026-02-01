@@ -56,9 +56,6 @@ func _ready() -> void:
 	for child in get_children():
 		if child is Padel:
 			addPadel(child)
-	
-	if testSpawningScript:
-		startSpawning(testSpawningScript)
 
 func _left_entered(body:Area3D) -> void:
 	if body.get_parent() is Ball:
@@ -101,18 +98,18 @@ func addPadel(padel:Padel) -> void:
 
 func addBall(ball:Ball) -> void:
 	balls.append(ball)
-	ball.initialPosition(Vector4(-fieldWidth/2, topOfField - 1.5, fieldWidth/2, topOfField - 1.5))
+	ball.initialPosition(Vector4(-fieldWidth/2 + 2, topOfField - 1.5, fieldWidth/2 - 2, topOfField - 1.5))
 	ballContainer.add_child(ball)
 
 func startSpawning(spawningScript:SpawningScript) -> void:
-	ballSpawner.startSpawning(spawningScript, self)
+	ballSpawner.startSpawning(spawningScript, self, acceptedBall)
 
 func startLevel(level:Level):
-	startSpawning(level.spawnScript)
 	if level.anyPositiveBalls:
 		acceptedBall = level.positiveBallType
 	else:
 		acceptedBall = -1
+	startSpawning(level.spawnScript)
 
 func setRunning(running:bool):
 	if running:

@@ -11,8 +11,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	time += delta
-	verticalSpeed = (sin(time*20)+1)/2
-	horizontalSpeed = sin(time*10)
-	print_debug(str((sin(time)+1)/2))
+	verticalSpeed = (sin(time*10)+1)/2
+	horizontalSpeed = sin(time*5)
 	super._process(delta)
 	pass

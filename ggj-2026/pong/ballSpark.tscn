@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://sujrdyaw0e0c"]
+
+[ext_resource type="Texture2D" uid="uid://cnkny1vuntqor" path="res://sprites/balls/Spark-Particle.png" id="1_mxnp2"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_to5l4"]
+particle_flag_disable_z = true
+direction = Vector3(0, 10, 0)
+spread = 20.0
+initial_velocity_min = 10.0
+initial_velocity_max = 20.0
+gravity = Vector3(0, -30, 0)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2bpn0"]
+transparency = 1
+shading_mode = 0
+albedo_texture = ExtResource("1_mxnp2")
+grow_amount = -10.0
+distance_fade_mode = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_mpeg1"]
+material = SubResource("StandardMaterial3D_2bpn0")
+
+[node name="GPUParticles3D" type="GPUParticles3D" unique_id=318749315]
+emitting = false
+one_shot = true
+explosiveness = 1.0
+local_coords = true
+trail_lifetime = 2.0
+process_material = SubResource("ParticleProcessMaterial_to5l4")
+draw_pass_1 = SubResource("QuadMesh_mpeg1")
