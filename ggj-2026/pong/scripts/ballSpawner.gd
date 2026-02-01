@@ -23,6 +23,7 @@ func startSpawning(spawningScript:SpawningScript, pongView:PongView) -> void:
 func spawnBall(type:SpawnRateChange.BallType) -> void:
 	var newBall:Ball = ballTypes[type].instantiate()
 	pongViewRef.addBall(newBall)
+	newBall.addGlow()
 
 func _process(delta: float) -> void:
 	timePassed = timePassed + delta
