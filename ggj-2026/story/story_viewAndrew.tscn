@@ -15,7 +15,7 @@
 script = ExtResource("1_r5g4u")
 textSpawner = NodePath("TextSpawner")
 hallWayToMove = NodePath("SceneContainer")
-positions = Array[Vector3]([Vector3(0, 0, 0), Vector3(-20, 0, 0), Vector3(-40, 0, 0), Vector3(-60, 0, 0), Vector3(-80, 0, 0), Vector3(-140, 0, 0)])
+positions = Array[Vector3]([Vector3(0, 0, 0), Vector3(-20, 0, 0), Vector3(-40, 0, 0), Vector3(-60, 0, 0), Vector3(-80, 0, 0)])
 
 [node name="TextSpawner" type="Node" parent="." unique_id=441583476 node_paths=PackedStringArray("dialogController")]
 script = ExtResource("2_ceikx")
@@ -33,36 +33,18 @@ texture = ExtResource("3_ceikx")
 
 [node name="SceneContainer" type="Node3D" parent="." unique_id=1185964989]
 
-[node name="Hallway" parent="SceneContainer" unique_id=594547195 instance=ExtResource("4_bllyj")]
+[node name="Hallway" parent="SceneContainer" unique_id=820862294 instance=ExtResource("4_bllyj")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, -15, 0)
 
-[node name="Hallway2" parent="SceneContainer" unique_id=1313695806 instance=ExtResource("4_bllyj")]
+[node name="Hallway2" parent="SceneContainer" unique_id=1096569386 instance=ExtResource("4_bllyj")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 100, -15, 0)
-visible = false
 
-[node name="Hallway3" parent="SceneContainer" unique_id=245115053 instance=ExtResource("4_bllyj")]
+[node name="Hallway3" parent="SceneContainer" unique_id=794521447 instance=ExtResource("4_bllyj")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 200, -15, 0)
-visible = false
 
 [node name="Character" parent="SceneContainer" unique_id=831092654 instance=ExtResource("3_bllyj")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 20, -14.932, 0)
 image = ExtResource("7_4elel")
-
-[node name="Character_bus_end" parent="SceneContainer" unique_id=1390737373 instance=ExtResource("3_bllyj")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 147.08951, -14.932, 0.9562168)
-image = ExtResource("8_crgwt")
-
-[node name="Character_rich_end" parent="SceneContainer" unique_id=1426947351 instance=ExtResource("3_bllyj")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 145.03151, -14.932, -2.5850186)
-image = ExtResource("9_fkw61")
-
-[node name="Character_degen_end" parent="SceneContainer" unique_id=975949700 instance=ExtResource("3_bllyj")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 134.62303, -12.679458, -3.9155164)
-image = ExtResource("10_c188o")
-
-[node name="Character_exchange_end" parent="SceneContainer" unique_id=1258744484 instance=ExtResource("3_bllyj")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 138.76686, -14.932, -0.97229195)
-image = ExtResource("11_l3cgg")
 
 [node name="DialogContainer" type="Node3D" parent="." unique_id=51484136 node_paths=PackedStringArray("nextLabel", "lastLabel", "bubble")]
 transform = Transform3D(1, 0, 0, 0, 0.81915206, -0.57357645, 0, 0.57357645, 0.81915206, 0.62847805, -6.408634, -0.88273764)

@@ -51,7 +51,7 @@ func resizePadel(size:float) -> void:
 	var middleWidth:float = size - 2
 	leftSprite.position.x = -middleWidth/2 - 0.5
 	rightSprite.position.x = middleWidth/2 + 0.5
-#	middleSprite.scale.x = middleWidth
+	middleSprite.scale.x = middleWidth
 	area.scale.x = size
 
 func flipDirection():
