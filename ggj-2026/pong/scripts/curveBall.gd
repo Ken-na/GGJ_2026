@@ -22,7 +22,6 @@ func _process(delta: float) -> void:
 
 var falling = false
 func collidedWithPadel(padel:Padel) -> void:
-	sparks.emitting = true
 	velocity.y = 5
 	falling = true
 
@@ -50,8 +49,6 @@ func rollNewCurve(padel:Padel):
 	isFollowingCurve = true
 	curMoveDist = 0
 	curveMoveSpeed = velocity.length()
-	
-	sparks.emitting = false
 
 func getMoveAlongCurve():
 	var delta: float = get_process_delta_time()

@@ -6,31 +6,24 @@
 
 [sub_resource type="Resource" id="Resource_numok"]
 script = ExtResource("3_c0uh0")
-time = 20.0
-newRate = 0.8
+time = 15.0
+newRate = 0.2
 metadata/_custom_type_script = "uid://b4tjphbpqkoio"
 
 [sub_resource type="Resource" id="Resource_x3cmq"]
 script = ExtResource("3_c0uh0")
 type = 1
-time = 20.0
-newRate = 0.3
-metadata/_custom_type_script = "uid://b4tjphbpqkoio"
-
-[sub_resource type="Resource" id="Resource_6yo27"]
-script = ExtResource("3_c0uh0")
-type = 1
-time = 35.0
-newRate = 0.7
+time = 15.0
+newRate = 0.6
 metadata/_custom_type_script = "uid://b4tjphbpqkoio"
 
 [sub_resource type="Resource" id="Resource_ehneq"]
 script = ExtResource("2_6yo27")
 startingSpawnValues = Dictionary[int, float]({
-0: 0.4,
-1: 0.0
+0: 1.0,
+2: 1.0
 })
-spawnRateChanges = Array[ExtResource("3_c0uh0")]([SubResource("Resource_numok"), SubResource("Resource_x3cmq"), SubResource("Resource_6yo27")])
+spawnRateChanges = Array[ExtResource("3_c0uh0")]([SubResource("Resource_numok"), SubResource("Resource_x3cmq")])
 metadata/_custom_type_script = "uid://beubkdyl0iuls"
 
 [resource]

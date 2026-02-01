@@ -36,10 +36,6 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	super._process(delta)
 	
-	leftSprite.modulate.a = alpha
-	middleSprite.modulate.a = alpha
-	rightSprite.modulate.a = alpha
-	
 	if !keyHeld:
 		changeDirOnFrequency(delta)
 		rotateDirDisplay()
@@ -96,9 +92,9 @@ func resizePadel(size:float) -> void:
 
 func checkEdgeCollisions() -> void:
 	if position.x - area.scale.x/2 < -pongView.fieldWidth/2:
-		velocity.x = 1
+		velocity.x *= -1
 	elif position.x + area.scale.x/2 > pongView.fieldWidth/2:
-		velocity.x = -1
+		velocity.x *= -1
 		
 	if position.y - area.scale.y/2 < -.5: #ganked from pongView
 		velocity.y *= -1
