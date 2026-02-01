@@ -2,9 +2,39 @@
 
 [ext_resource type="Script" uid="uid://bu7wnlshfcssi" path="res://pong/scripts/padelSee.gd" id="1_tmndj"]
 [ext_resource type="Texture2D" uid="uid://jpwfj5ve2tck" path="res://sprites/keys/numbers1Through5.png" id="2_tmndj"]
-[ext_resource type="Texture2D" uid="uid://dujj7h4fsj5e6" path="res://sprites/paddle/paddle-end-16x16.png" id="3_j3q6o"]
+[ext_resource type="Texture2D" uid="uid://mrg8y080ho0b" path="res://sprites/paddle/Paddle-Star.png" id="3_tmndj"]
 [ext_resource type="Texture2D" uid="uid://bfbwi3bxnca6s" path="res://sprites/paddle/paddle-mid-16x16.png" id="4_ga4ac"]
 [ext_resource type="Shape3D" uid="uid://bqkxtsnd3kqqp" path="res://pong/padels/base.tres" id="5_w2vlf"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_vf3hg"]
+emission_shape_offset = Vector3(0, 0.35, 0)
+spread = 0.0
+initial_velocity_min = 1.0
+initial_velocity_max = 5.0
+gravity = Vector3(0, 0, 0)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j3q6o"]
+transparency = 1
+albedo_texture = ExtResource("3_tmndj")
+
+[sub_resource type="QuadMesh" id="QuadMesh_ga4ac"]
+material = SubResource("StandardMaterial3D_j3q6o")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_w2vlf"]
+particle_flag_disable_z = true
+emission_shape_offset = Vector3(0, 0.25, 0)
+direction = Vector3(-1, 0, 0)
+spread = 0.0
+initial_velocity_min = 1.0
+initial_velocity_max = 5.0
+gravity = Vector3(0, 0, 0)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a7eju"]
+transparency = 1
+albedo_texture = ExtResource("3_tmndj")
+
+[sub_resource type="QuadMesh" id="QuadMesh_7a7sg"]
+material = SubResource("StandardMaterial3D_a7eju")
 
 [node name="padelSee" type="Node3D" unique_id=795246886 node_paths=PackedStringArray("leftSprite", "middleSprite", "rightSprite", "iconSprite", "area")]
 script = ExtResource("1_tmndj")
@@ -25,9 +55,16 @@ texture = ExtResource("2_tmndj")
 [node name="Left" type="Sprite3D" parent="." unique_id=814584427]
 pixel_size = 0.0625
 texture_filter = 0
-texture = ExtResource("3_j3q6o")
+texture = ExtResource("3_tmndj")
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="Left" unique_id=927892244]
+lifetime = 0.7
+local_coords = true
+process_material = SubResource("ParticleProcessMaterial_vf3hg")
+draw_pass_1 = SubResource("QuadMesh_ga4ac")
 
 [node name="Middle" type="Sprite3D" parent="." unique_id=1761826639]
+visible = false
 pixel_size = 0.0625
 texture_filter = 0
 texture = ExtResource("4_ga4ac")
@@ -36,7 +73,13 @@ texture = ExtResource("4_ga4ac")
 flip_h = true
 pixel_size = 0.0625
 texture_filter = 0
-texture = ExtResource("3_j3q6o")
+texture = ExtResource("3_tmndj")
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="Right" unique_id=938141616]
+lifetime = 0.7
+local_coords = true
+process_material = SubResource("ParticleProcessMaterial_w2vlf")
+draw_pass_1 = SubResource("QuadMesh_7a7sg")
 
 [node name="Area3D" type="Area3D" parent="." unique_id=299177442]
 
