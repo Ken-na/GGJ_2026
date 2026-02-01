@@ -8,6 +8,8 @@ var moving:bool = false
 @export var rightSprite:Sprite3D
 @export var iconSprite:Sprite3D
 
+#@export var bodyShader:ShaderMaterial
+
 #this padel only moves when holding space, flips direction when press space, flips directions on bound.
 
 # Called when the node enters the scene tree for the first time.
@@ -57,3 +59,11 @@ func resizePadel(size:float) -> void:
 func flipDirection():
 	super.flipDirection()
 	movingRight = !movingRight
+	
+	#temp fo testing
+	#middleSprite.set_shader_parameter("do_rainbow", 1)
+	
+	middleSprite.material_override.set_shader_parameter("do_rainbow", 1)
+	await get_tree().create_timer(.25).timeout
+	#middleSprite.set_shader_parameter("do_rainbow", 0)
+	middleSprite.material_override.set_shader_parameter("do_rainbow", 0)
