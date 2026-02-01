@@ -1,9 +1,9 @@
-[gd_scene format=3 uid="uid://q5jv38aprjs"]
+[gd_scene format=3 uid="uid://datag10aelusj"]
 
 [ext_resource type="PackedScene" uid="uid://ca0whf7l0j0d6" path="res://pong/pong_view_andrew.tscn" id="1_4u3hy"]
 [ext_resource type="Script" uid="uid://dvyltx743lx0t" path="res://combine/combineSceneManager.gd" id="1_wh044"]
 [ext_resource type="Resource" uid="uid://sonxmk0cgvbd" path="res://pong/resources/writingEncounters.tres" id="2_jovnt"]
-[ext_resource type="PackedScene" uid="uid://cgeskwu8ecemw" path="res://story/story_viewAndrew.tscn" id="5_cjb3u"]
+[ext_resource type="PackedScene" uid="uid://bjb3v37a2bxjf" path="res://story/story_viewAndrew.tscn" id="5_cjb3u"]
 
 [sub_resource type="Environment" id="Environment_jovnt"]
 background_mode = 1
