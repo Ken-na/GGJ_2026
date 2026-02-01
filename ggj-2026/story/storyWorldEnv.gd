@@ -11,7 +11,7 @@ var movingToNextScene:bool = false
 
 #var moveTime: float = 3
 var movePerc: float = 0
-var moveSpeed: float = .25
+var moveSpeed: float = 0.25
 
 
 # Called when the node enters the scene tree for the first time.
@@ -26,17 +26,19 @@ func _process(delta: float) -> void:
 	pass
 
 func setupEnv():
+	pass
 	# Create a WorldEnvironment node
-	var world_environment = WorldEnvironment.new()
-	add_child(world_environment)
+	#var world_environment = WorldEnvironment.new()
+	#add_child(world_environment)
 	
 	# Create an Environment resource
-	var environment = Environment.new()
-	world_environment.environment = environment
+	#var environment = Environment.new()
+	#environment.sky
+	#world_environment.environment = environment
 	
 	# Set ambient light properties
-	environment.ambient_light_color = Color(0.5, 0.5, 0.5) # Grey color
-	environment.ambient_light_energy = 1.0 # Intensity
+	#environment.ambient_light_color = Color(0.5, 0.5, 0.5) # Grey color
+	#environment.ambient_light_energy = 1.0 # Intensity
 
 func nextScene():
 	currPosition = clamp(currPosition + 1, 0, positions.size())

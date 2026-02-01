@@ -6,9 +6,11 @@
 [ext_resource type="Script" uid="uid://cq24k5lsfcs3o" path="res://pong/scripts/ballSpawner.gd" id="4_8vvw0"]
 [ext_resource type="PackedScene" uid="uid://dvhci7hwd2imw" path="res://pong/padels/padelLeftRight.tscn" id="4_tcaqb"]
 [ext_resource type="PackedScene" uid="uid://cajutpunyk7rj" path="res://pong/padels/padelSee.tscn" id="5_ou6pn"]
+[ext_resource type="PackedScene" uid="uid://cgnk0qm4paxob" path="res://pong/padels/padelBouncer.tscn" id="6_ba3f4"]
 [ext_resource type="PackedScene" uid="uid://b8q22n1vnmij6" path="res://pong/ball.tscn" id="6_tcaqb"]
 [ext_resource type="Shape3D" uid="uid://bqkxtsnd3kqqp" path="res://pong/padels/base.tres" id="7_k5qf5"]
-[ext_resource type="PackedScene" uid="uid://b82vxk5niiqvg" path="res://pong/ball/sineBallball.tscn" id="8_gpjh6"]
+[ext_resource type="PackedScene" uid="uid://c0prdfh04fx1p" path="res://pong/ball/sineBallball.tscn" id="8_gpjh6"]
+[ext_resource type="PackedScene" uid="uid://tqic6sl4uyvu" path="res://pong/ball/curveBall.tscn" id="10_o5kj1"]
 
 [node name="PongView" type="Node3D" unique_id=2027028987 node_paths=PackedStringArray("background", "ballSpawner", "ballContainer", "leftCollidor", "rightCollidor", "topCollidor", "botCollidor")]
 transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
@@ -32,10 +34,15 @@ texture = ExtResource("3_k5qf5")
 [node name="padelLeftRight" parent="." unique_id=795246886 instance=ExtResource("4_tcaqb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2059276, 0)
 moveSpeed = 10.0
+growIncrement = 0.4
 startEnabled = true
 
 [node name="padelSee" parent="." unique_id=1551834002 instance=ExtResource("5_ou6pn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.4811416, 0)
+growIncrement = 0.2
+
+[node name="padelBounce" parent="." unique_id=2036559393 instance=ExtResource("6_ba3f4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.895441, 0)
 
 [node name="ballContainer" type="Node3D" parent="." unique_id=100583094]
 
@@ -43,7 +50,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.4811416, 0)
 script = ExtResource("4_8vvw0")
 ballTypes = Dictionary[int, PackedScene]({
 0: ExtResource("6_tcaqb"),
-1: ExtResource("8_gpjh6")
+1: ExtResource("8_gpjh6"),
+2: ExtResource("10_o5kj1")
 })
 metadata/_custom_type_script = "uid://cq24k5lsfcs3o"
 
