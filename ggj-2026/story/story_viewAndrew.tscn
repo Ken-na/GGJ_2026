@@ -3,17 +3,13 @@
 [ext_resource type="Script" uid="uid://de3q3poetfgsd" path="res://story/storyWorldEnv.gd" id="1_r5g4u"]
 [ext_resource type="Script" uid="uid://c6ej8bi4muex2" path="res://pong/scripts/textSpawner.gd" id="2_ceikx"]
 [ext_resource type="PackedScene" uid="uid://cf0m5vmmarnoo" path="res://story/character.tscn" id="3_bllyj"]
+[ext_resource type="Texture2D" uid="uid://dnoslvo81sb5l" path="res://sprites/characters/Player-sprite.png" id="3_ceikx"]
 [ext_resource type="Texture2D" uid="uid://bjabuilwucqtn" path="res://icon.svg" id="3_jjbvn"]
 [ext_resource type="PackedScene" uid="uid://6wwevf502q7a" path="res://story/3D_Assets/Out/Hallway.glb" id="4_bllyj"]
-[ext_resource type="Texture2D" uid="uid://baxq7y8pq70ft" path="res://sprites/characters/Animated/Player-Idle.png" id="4_c10qi"]
-[ext_resource type="Script" path="res://pong/scripts/faceCamera.gd" id="4_jjbvn"]
-[ext_resource type="Script" uid="uid://derak6t33sfyt" path="res://story/spriteSheetAnimator.gd" id="5_8u63n"]
+[ext_resource type="Script" uid="uid://c1lfd3mn7ehiw" path="res://pong/scripts/faceCamera.gd" id="4_jjbvn"]
 [ext_resource type="Script" uid="uid://2tiy4pfapg8m" path="res://story/dialogController.gd" id="5_bilnc"]
+[ext_resource type="Texture2D" uid="uid://cx7ostjy851o7" path="res://sprites/characters/Bus-Driver-Sprite.png" id="7_4elel"]
 [ext_resource type="Texture2D" uid="uid://bhmu58rk6gi4i" path="res://sprites/Speechbubble.png" id="8_bllyj"]
-[ext_resource type="Texture2D" uid="uid://b1200upefjj3o" path="res://sprites/characters/Animated/Bus-Driver-Idle.png" id="8_crgwt"]
-[ext_resource type="Texture2D" uid="uid://di8barr36ko5a" path="res://sprites/characters/Animated/Rich-Kid-Idle.png" id="9_fkw61"]
-[ext_resource type="Texture2D" uid="uid://cqc6a7owvughv" path="res://sprites/characters/Animated/Degenerate-kid-Idle.png" id="10_c188o"]
-[ext_resource type="Texture2D" uid="uid://k8vmaymketid" path="res://sprites/characters/Animated/Exchange-Idle.png..png" id="11_l3cgg"]
 
 [node name="StoryView" type="Node3D" unique_id=1344410322 node_paths=PackedStringArray("textSpawner", "hallWayToMove")]
 script = ExtResource("1_r5g4u")
@@ -33,9 +29,7 @@ script = ExtResource("4_jjbvn")
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 1.2388747, 0)
 pixel_size = 0.0625
 texture_filter = 0
-texture = ExtResource("4_c10qi")
-hframes = 6
-script = ExtResource("5_8u63n")
+texture = ExtResource("3_ceikx")
 
 [node name="SceneContainer" type="Node3D" parent="." unique_id=1185964989]
 
@@ -48,21 +42,9 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 100,
 [node name="Hallway3" parent="SceneContainer" unique_id=794521447 instance=ExtResource("4_bllyj")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 200, -15, 0)
 
-[node name="Character_bus" parent="SceneContainer" unique_id=831092654 instance=ExtResource("3_bllyj")]
+[node name="Character" parent="SceneContainer" unique_id=831092654 instance=ExtResource("3_bllyj")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 20, -14.932, 0)
-image = ExtResource("8_crgwt")
-
-[node name="Character_rich" parent="SceneContainer" unique_id=567264747 instance=ExtResource("3_bllyj")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 40, -14.932, 0)
-image = ExtResource("9_fkw61")
-
-[node name="Character_degen" parent="SceneContainer" unique_id=1829903027 instance=ExtResource("3_bllyj")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 60, -14.932, 0)
-image = ExtResource("10_c188o")
-
-[node name="Character_exchange" parent="SceneContainer" unique_id=1107121039 instance=ExtResource("3_bllyj")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 80, -14.932, 0)
-image = ExtResource("11_l3cgg")
+image = ExtResource("7_4elel")
 
 [node name="DialogContainer" type="Node3D" parent="." unique_id=51484136 node_paths=PackedStringArray("nextLabel", "lastLabel", "bubble")]
 transform = Transform3D(1, 0, 0, 0, 0.81915206, -0.57357645, 0, 0.57357645, 0.81915206, 0.62847805, -6.408634, -0.88273764)

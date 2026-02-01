@@ -1,8 +1,7 @@
 [gd_scene format=3 uid="uid://cf0m5vmmarnoo"]
 
-[ext_resource type="Script" path="res://pong/scripts/faceCamera.gd" id="1_hvyrm"]
+[ext_resource type="Script" uid="uid://c1lfd3mn7ehiw" path="res://pong/scripts/faceCamera.gd" id="1_hvyrm"]
 [ext_resource type="Texture2D" uid="uid://dnoslvo81sb5l" path="res://sprites/characters/Player-sprite.png" id="2_fuhek"]
-[ext_resource type="Script" uid="uid://derak6t33sfyt" path="res://story/spriteSheetAnimator.gd" id="3_fuhek"]
 
 [node name="Character" type="Node3D" unique_id=831092654 node_paths=PackedStringArray("spriteObject")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
@@ -14,5 +13,3 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, -4.371139e-08, 0, 4.371139e-08, 0.5, 
 pixel_size = 0.0625
 texture_filter = 0
 texture = ExtResource("2_fuhek")
-hframes = 6
-script = ExtResource("3_fuhek")
