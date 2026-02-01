@@ -80,6 +80,7 @@ texture_filter = 0
 texture = ExtResource("3_fguk3")
 
 [node name="GPUParticles3D" type="GPUParticles3D" parent="Right" unique_id=700570414]
+local_coords = true
 process_material = SubResource("ParticleProcessMaterial_nrlwa")
 draw_pass_1 = SubResource("QuadMesh_vbpdf")
 
