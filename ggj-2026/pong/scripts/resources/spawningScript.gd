@@ -5,7 +5,8 @@ class_name SpawningScript
 @export var spawnRateChanges:Array[SpawnRateChange]
 
 func getSpawnRate(ballType:SpawnRateChange.BallType, time:float) -> float:
-	for spawnRateChange in spawnRateChanges:
+	for i in range(spawnRateChanges.size() - 1, 0, -1):
+		var spawnRateChange = spawnRateChanges[i]
 		if spawnRateChange.type == ballType and spawnRateChange.time < time:
 			return spawnRateChange.newRate
 	
