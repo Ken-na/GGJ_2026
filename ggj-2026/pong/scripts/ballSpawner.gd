@@ -3,6 +3,7 @@ class_name BallSpawner
 
 @export var ballTypes:Dictionary[SpawnRateChange.BallType, PackedScene]
 var ballSpawnProgress:Dictionary[SpawnRateChange.BallType, float]
+var goodBallType:SpawnRateChange.BallType
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -14,16 +15,18 @@ var mSpawningScript:SpawningScript
 var started:bool = false
 var timePassed:float = 0
 var pongViewRef:PongView
-func startSpawning(spawningScript:SpawningScript, pongView:PongView) -> void:
+func startSpawning(spawningScript:SpawningScript, pongView:PongView, ballType:SpawnRateChange.BallType) -> void:
 	started = true
 	timePassed = 0
 	pongViewRef = pongView
 	mSpawningScript = spawningScript
+	goodBallType = ballType
 
 func spawnBall(type:SpawnRateChange.BallType) -> void:
 	var newBall:Ball = ballTypes[type].instantiate()
 	pongViewRef.addBall(newBall)
-	newBall.addGlow()
+	if type == goodBallType:
+		newBall.addGlow()
 
 func _process(delta: float) -> void:
 	timePassed = timePassed + delta
@@ -31,7 +34,6 @@ func _process(delta: float) -> void:
 		for type:SpawnRateChange.BallType in SpawnRateChange.BallType.size():
 			var spawnRate = mSpawningScript.getSpawnRate(type, timePassed)
 			ballSpawnProgress[type] = ballSpawnProgress[type] + delta*spawnRate*randf()
-			
 			while ballSpawnProgress[type] > 1:
 				spawnBall(type)
 				ballSpawnProgress[type] = ballSpawnProgress[type] - 1
