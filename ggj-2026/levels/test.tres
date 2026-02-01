@@ -20,7 +20,8 @@ metadata/_custom_type_script = "uid://b4tjphbpqkoio"
 [sub_resource type="Resource" id="Resource_ehneq"]
 script = ExtResource("2_6yo27")
 startingSpawnValues = Dictionary[int, float]({
-0: 1.0
+0: 1.0,
+2: 1.0
 })
 spawnRateChanges = Array[ExtResource("3_c0uh0")]([SubResource("Resource_numok"), SubResource("Resource_x3cmq")])
 metadata/_custom_type_script = "uid://beubkdyl0iuls"
