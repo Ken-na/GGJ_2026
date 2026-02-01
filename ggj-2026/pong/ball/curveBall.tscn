@@ -4,7 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://d1hakpr0tu607" path="res://sprites/balls/Sadness-ball.png" id="2_1cycq"]
 [ext_resource type="PackedScene" uid="uid://sujrdyaw0e0c" path="res://pong/ballSpark.tscn" id="3_7jaoh"]
 [ext_resource type="Shape3D" uid="uid://brunftramid2h" path="res://pong/ballShape.tres" id="3_xratu"]
-[ext_resource type="Material" uid="uid://difiu460pg3q0" path="res://shaders/emotionGlowSad.tres" id="5_j6wql"]
 
 [sub_resource type="Curve3D" id="Curve3D_1cycq"]
 _data = {
@@ -20,16 +19,14 @@ pathFollowToFollow = NodePath("Path3D/PathFollow3D")
 area = NodePath("Area3D")
 ballTypeID = 2
 sparks = NodePath("Sprite3D/GPUParticles3D")
-spriteToGlow = NodePath("glow")
+spriteToGlow = NodePath("Sprite3D")
 
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=1922072098]
-sorting_offset = 9.0
 pixel_size = 0.0625
 texture_filter = 0
 texture = ExtResource("2_1cycq")
 
 [node name="GPUParticles3D" parent="Sprite3D" unique_id=318749315 instance=ExtResource("3_7jaoh")]
-local_coords = true
 
 [node name="Area3D" type="Area3D" parent="." unique_id=40941805]
 
@@ -41,12 +38,3 @@ curve = SubResource("Curve3D_1cycq")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="Path3D" unique_id=1192685152]
 transform = Transform3D(-1.8520232e-08, 0.8445745, 0.53543454, -5.960464e-08, 0.53543454, -0.8445745, -1, -4.7556103e-08, 4.0424187e-08, 0, 0, 0)
-
-[node name="glow" type="Sprite3D" parent="." unique_id=1037713707]
-visible = false
-sorting_offset = 8.0
-material_override = ExtResource("5_j6wql")
-cast_shadow = 0
-pixel_size = 0.0625
-texture_filter = 0
-texture = ExtResource("2_1cycq")
