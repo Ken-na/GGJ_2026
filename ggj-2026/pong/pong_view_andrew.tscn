@@ -34,16 +34,14 @@ texture = ExtResource("3_o5kj1")
 
 [node name="padelLeftRight" parent="." unique_id=795246886 instance=ExtResource("4_tcaqb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2059276, 0)
-moveSpeed = 10.0
-growIncrement = 0.4
 startEnabled = true
 
 [node name="padelSee" parent="." unique_id=1551834002 instance=ExtResource("5_ou6pn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.4811416, 0)
-growIncrement = 0.2
 
 [node name="padelBounce" parent="." unique_id=2036559393 instance=ExtResource("6_ba3f4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.895441, 0)
+growIncrement = 1.5
 
 [node name="ballContainer" type="Node3D" parent="." unique_id=100583094]
 

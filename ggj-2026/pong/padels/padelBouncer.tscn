@@ -44,6 +44,7 @@ iconSprite = NodePath("DirectionArrow")
 area = NodePath("Area3D")
 moveSpeed = 5.0
 baseSize = 4.0
+growIncrement = 1.0
 colliderBallID = 2
 
 [node name="Area3D" type="Area3D" parent="." unique_id=299177442]

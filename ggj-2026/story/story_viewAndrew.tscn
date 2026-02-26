@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bjabuilwucqtn" path="res://icon.svg" id="3_jjbvn"]
 [ext_resource type="PackedScene" uid="uid://6wwevf502q7a" path="res://story/3D_Assets/Out/Hallway.glb" id="4_bllyj"]
 [ext_resource type="Texture2D" uid="uid://baxq7y8pq70ft" path="res://sprites/characters/Animated/Player-Idle.png" id="4_c10qi"]
-[ext_resource type="Script" path="res://pong/scripts/faceCamera.gd" id="4_jjbvn"]
+[ext_resource type="Script" uid="uid://c1lfd3mn7ehiw" path="res://pong/scripts/faceCamera.gd" id="4_jjbvn"]
 [ext_resource type="Script" uid="uid://derak6t33sfyt" path="res://story/spriteSheetAnimator.gd" id="5_8u63n"]
 [ext_resource type="Script" uid="uid://2tiy4pfapg8m" path="res://story/dialogController.gd" id="5_bilnc"]
 [ext_resource type="Texture2D" uid="uid://bhmu58rk6gi4i" path="res://sprites/Speechbubble.png" id="8_bllyj"]
@@ -59,27 +59,27 @@ transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 40, -14.932, 0)
 image = ExtResource("9_fkw61")
 
 [node name="Character_degen" parent="SceneContainer" unique_id=1829903027 instance=ExtResource("3_bllyj")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 60, -14.932, 0)
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 80.189, -14.724, 0)
 image = ExtResource("10_c188o")
 
 [node name="Character_exchange" parent="SceneContainer" unique_id=1107121039 instance=ExtResource("3_bllyj")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 80, -14.932, 0)
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 60, -14.9, 0)
 image = ExtResource("11_l3cgg")
 
 [node name="Character_bus_end" parent="SceneContainer" unique_id=1390737373 instance=ExtResource("3_bllyj")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 147.08951, -14.932, 0.9562168)
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 145.04285, -14.932, 0.9562168)
 image = ExtResource("8_crgwt")
 
 [node name="Character_rich_end" parent="SceneContainer" unique_id=1426947351 instance=ExtResource("3_bllyj")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 145.03151, -14.932, -2.5850186)
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 141.817, -14.932, 0.4604907)
 image = ExtResource("9_fkw61")
 
 [node name="Character_degen_end" parent="SceneContainer" unique_id=975949700 instance=ExtResource("3_bllyj")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 134.62303, -12.679458, -3.9155164)
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 134.62303, -13.065252, -1.9668016)
 image = ExtResource("10_c188o")
 
 [node name="Character_exchange_end" parent="SceneContainer" unique_id=1258744484 instance=ExtResource("3_bllyj")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 138.76686, -14.932, -0.97229195)
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 138.76686, -14.932, -0.47260952)
 image = ExtResource("11_l3cgg")
 
 [node name="DialogContainer" type="Node3D" parent="." unique_id=51484136 node_paths=PackedStringArray("nextLabel", "lastLabel", "bubble")]
@@ -121,6 +121,7 @@ texture = ExtResource("3_jjbvn")
 
 [node name="bubble" type="Sprite3D" parent="DialogContainer" unique_id=1473812861]
 transform = Transform3D(3.5, 0, 0, 0, 2.5, 0, 0, 0, 5, 0, -3.5337696, -0.117406845)
+flip_h = true
 pixel_size = 0.065
 texture_filter = 0
 texture = ExtResource("8_bllyj")

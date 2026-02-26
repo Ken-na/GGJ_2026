@@ -45,6 +45,7 @@ iconSprite = NodePath("SpaceIcon")
 area = NodePath("Area3D")
 moveSpeed = 5.0
 baseSize = 3.0
+growIncrement = 1.0
 colliderBallID = 1
 
 [node name="SpaceIcon" type="Sprite3D" parent="." unique_id=1277109727]
