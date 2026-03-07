@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cjtsqmxu38pue"
+path="res://.godot/imported/Mask SFX - Dud sfx 3.ogg-095b5a843d7c50d1dda5e78fb578497b.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/Mask SFX - Dud sfx 3.ogg"
+dest_files=["res://.godot/imported/Mask SFX - Dud sfx 3.ogg-095b5a843d7c50d1dda5e78fb578497b.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

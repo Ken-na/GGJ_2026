@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://0io8k20vc8iy"
+path="res://.godot/imported/Mask SFX 8.ogg-6cb8f408bdd6e790bb6acd52feaef3c5.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/Mask SFX 8.ogg"
+dest_files=["res://.godot/imported/Mask SFX 8.ogg-6cb8f408bdd6e790bb6acd52feaef3c5.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

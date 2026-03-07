@@ -1,7 +1,7 @@
 extends AudioStreamPlayer
 
-const walking_music = preload("res://Audio/Short Walking Placeholder.ogg")
-const pong_music = preload("res://Audio/Mask-Edit1.ogg")
+const walking_music = preload("res://Audio/Walking Music GGJ - Edit.ogg")
+const pong_music = preload("res://Audio/Mask Track 7.3.ogg")
 
 func _play_music(music: AudioStream, volume = 0.0):
 	if stream == music:

@@ -11,7 +11,7 @@ class_name Ball
 
 @export var spriteToGlow:Sprite3D
 
-const sfxBounce = preload("res://Audio/Mask SFX2.wav")
+const sfxBounce = preload("res://Audio/Mask SFX Bounce.ogg")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -20,7 +20,8 @@ func _ready() -> void:
 func collidedWithPadel(padel:Padel) -> void:
 	velocity.y = -velocity.y
 	sparks.emitting = true
-	
+	play_sfx(sfxBounce)	
+	print ("bounce")
 
 func collidedWithEdge(side:int) -> void:
 	velocity.x = -velocity.x
@@ -50,3 +51,15 @@ func _process(delta: float) -> void:
 	# Move based on velocity
 	transform.origin.x += velocity.x*delta * horizontalSpeed;
 	transform.origin.y += velocity.y*delta * verticalSpeed;
+
+func play_sfx(sound: AudioStream, parent: Node = get_tree().current_scene,
+ 		pitch_range: Vector2 = Vector2(1.0,1.0), volume_db: float = 1):
+	if sound != null and parent != null:
+		var stream_player = AudioStreamPlayer.new()
+
+		stream_player.stream = sound
+		stream_player.pitch_scale = randf_range(pitch_range.x, pitch_range.y)
+		stream_player.volume_db = volume_db
+
+		parent.add_child(stream_player)
+		stream_player.play()
