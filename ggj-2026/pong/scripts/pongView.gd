@@ -21,9 +21,9 @@ var balls:Array[Ball]
 
 var acceptedBall:SpawnRateChange.BallType = -1
 
-const sfxGrow = preload("res://Audio/Sfx6.ogg")
+const sfxGrow = preload("res://Audio/Mask SFX - Dud Sfx 2.ogg")
 
-const sfxShrink = preload("res://Audio/Sfx5.ogg")
+const sfxShrink = preload("res://Audio/Mask SFX 8.ogg")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

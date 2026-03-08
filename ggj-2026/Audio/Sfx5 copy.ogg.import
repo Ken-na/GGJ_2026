@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://tss0g4w3bt1u"
+path="res://.godot/imported/Sfx5 copy.ogg-1ef5b18db3b864c71ea44cee8b285ad0.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/Sfx5 copy.ogg"
+dest_files=["res://.godot/imported/Sfx5 copy.ogg-1ef5b18db3b864c71ea44cee8b285ad0.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

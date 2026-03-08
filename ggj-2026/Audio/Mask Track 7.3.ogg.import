@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://1h3u3i2ur5ty"
+path="res://.godot/imported/Mask Track 7.3.ogg-3b376d90d84aaf347a2081b3d442fd04.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/Mask Track 7.3.ogg"
+dest_files=["res://.godot/imported/Mask Track 7.3.ogg-3b376d90d84aaf347a2081b3d442fd04.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=124.0
+beat_count=176
+bar_beats=4
